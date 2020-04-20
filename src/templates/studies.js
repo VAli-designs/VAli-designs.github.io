@@ -139,80 +139,70 @@ const StudyPageTemplate = ({
     >
       All About the process - {steps.length} steps
     </h3>
-    {steps.map(
-      (
-        {
-          childMarkdownRemark: {
-            frontmatter: { title, image, imageAlt, imageTitle },
-            html,
+    {steps.map(({ title, image, imageAlt, imageTitle, body }, index) => (
+      <section
+        key={index}
+        css={[
+          {
+            display: 'flex',
+            paddingBottom: 70,
+            paddingTop: 50,
+            marginLeft: 120,
+            marginRight: 120,
+            maxWidth: 1400,
+            [mediaQuery.bigDesktop]: {
+              margin: 'auto',
+            },
+            justifyContent: 'space-around',
           },
-        },
-        index,
-      ) => (
-        <section
-          key={index}
+          index === steps.length - 1 && {
+            background: colors.lightGrey,
+            marginBottom: '120px !important',
+          },
+        ]}
+      >
+        <div
           css={[
             {
+              width: '50%',
+              marginRight: 60,
+              fontSize: fontSizes.medium,
               display: 'flex',
-              paddingBottom: 70,
-              paddingTop: 50,
-              marginLeft: 120,
-              marginRight: 120,
-              maxWidth: 1400,
-              [mediaQuery.bigDesktop]: {
-                margin: 'auto',
-              },
-              justifyContent: 'space-around',
+              flexDirection: 'column',
+              maxWidth: 700,
             },
-            index === steps.length - 1 && {
-              background: colors.lightGrey,
-              marginBottom: '120px !important',
+            !image && {
+              width: '60%',
+              marginRight: 0,
+              textAlign: 'center',
+              alignItems: 'center',
             },
           ]}
         >
-          <div
-            css={[
-              {
-                width: '50%',
-                marginRight: 60,
-                fontSize: fontSizes.medium,
-                display: 'flex',
-                flexDirection: 'column',
-                maxWidth: 700,
-              },
-              !image && {
-                width: '60%',
-                marginRight: 0,
-                textAlign: 'center',
-                alignItems: 'center',
-              },
-            ]}
+          <h3
+            css={{
+              color,
+              fontFamily: fonts.title,
+              fontWeight: fontWeights.regular,
+              fontSize: fontSizes.title,
+              marginBottom: 40,
+            }}
           >
-            <h3
-              css={{
-                color,
-                fontFamily: fonts.title,
-                fontWeight: fontWeights.regular,
-                fontSize: fontSizes.title,
-                marginBottom: 40,
-              }}
-            >
-              {index + 1}/{steps.length} <br />
-              {title}
-            </h3>
-            <p css={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
-          {image && (
-            <Img
-              css={{ flex: 1, maxHeight: 440 }}
-              fluid={image.childImageSharp.fluid}
-              alt={imageAlt}
-              title={imageTitle}
-            />
-          )}
-        </section>
-      ),
-    )}
+            {index + 1}/{steps.length} <br />
+            {title}
+          </h3>
+          <p css={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: body }} />
+        </div>
+        {image && (
+          <Img
+            css={{ flex: 1, maxHeight: 440 }}
+            fluid={image.childImageSharp.fluid}
+            alt={imageAlt}
+            title={imageTitle}
+          />
+        )}
+      </section>
+    ))}
     <GetInTouch />
     <Footer />
   </>
@@ -239,21 +229,17 @@ export const pageQuery = graphql`
         clientNeedsTitle
         clientNeedsContent
         steps {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 2560) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2560) {
+                ...GatsbyImageSharpFluid
               }
-              imageAlt
-              imageTitle
             }
-            html
           }
+          imageAlt
+          imageTitle
+          body
         }
       }
       html

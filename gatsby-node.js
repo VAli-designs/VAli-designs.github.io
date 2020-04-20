@@ -10,10 +10,14 @@ exports.createPages = async ({ graphql, actions }) => {
     },
   } = await graphql(`
     query {
-      allFile(filter: { absolutePath: { regex: "//studies/.*index.md/" } }) {
+      allFile(filter: { absolutePath: { regex: "//studies/.*[.]md$/" } }) {
         nodes {
           absolutePath
-          relativeDirectory
+          childMarkdownRemark {
+            frontmatter {
+              id
+            }
+          }
         }
       }
     }
@@ -21,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   nodes.forEach((node) => {
     createPage({
-      path: `/studies/${node.relativeDirectory}/`,
+      path: `/studies/${node.childMarkdownRemark.frontmatter.id}/`,
       component: path.resolve(`./src/templates/studies.js`),
       context: { sourcePath: node.absolutePath },
     });

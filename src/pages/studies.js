@@ -19,10 +19,7 @@ const StudiesPage = ({
   },
 }) => {
   const studies = allMarkdownRemark.nodes
-    .map(({ frontmatter, parent }) => ({
-      ...frontmatter,
-      slug: parent.relativeDirectory,
-    }))
+    .map(({ frontmatter }) => frontmatter)
     .sort((a, b) => a.order - b.order);
 
   return (
@@ -57,7 +54,7 @@ const StudiesPage = ({
             mainImage,
             mainImageTitle,
             mainImageAlt,
-            slug,
+            id,
             excerpt,
           }) => (
             <div
@@ -92,11 +89,11 @@ const StudiesPage = ({
                 <p
                   css={{ flex: 1 }}
                   dangerouslySetInnerHTML={{
-                    __html: excerpt.childMarkdownRemark.html,
+                    __html: excerpt.body,
                   }}
                 />
                 <Link
-                  to={`/studies/${slug}`}
+                  to={`/studies/${id}`}
                   css={[
                     linkStyle(colors.lightGrey, colors.text),
                     { color: colors.dark, alignSelf: 'center' },
@@ -134,15 +131,11 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//studies/.*index.md/" } }
+      filter: { fileAbsolutePath: { regex: "//studies/.*[.]md/" } }
     ) {
       nodes {
-        parent {
-          ... on File {
-            relativeDirectory
-          }
-        }
         frontmatter {
+          id
           title
           color
           order
@@ -156,9 +149,7 @@ export const pageQuery = graphql`
           mainImageTitle
           mainImageAlt
           excerpt {
-            childMarkdownRemark {
-              html
-            }
+            body
           }
         }
       }
