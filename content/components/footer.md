@@ -1,15 +1,15 @@
---- 
-email: 'contact@allaboutusers.com'
-phone: '+330756997541'
-phoneDisplay: '+33 07 56 99 75 41'
-linkedIn: 'http://www.linkedin.com/company/AllAboutUsers'
-medium: 'http://www.medium.com/AllAboutUsers'
-twitter: 'http://www.twitter.com/AllAboutUsers'
---- 
-AllAboutUsers is a UX Research agency based in France.
-<br />
-<br />
+---
+email: contact@allaboutusers.com
+phone: "+330756997541"
+phoneDisplay: +33 07 56 99 75 41
+linkedIn: http://www.linkedin.com/company/AllAboutUsers
+medium: http://www.medium.com/AllAboutUsers
+twitter: http://www.twitter.com/AllAboutUsers
+---
+ AllAboutUsers is a UX Research agency based in France.
+
+
 We provide insights for you to take strategic decisions base on your user's feedback.
-<br />
-<br />
+
+
 **© 2020 by All About Users**

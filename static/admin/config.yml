@@ -141,6 +141,33 @@ collections:
           - {label: Content, name: body, widget: markdown}
   
           # - name: "blog"
+  - label: "Components"
+    name: "components"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - label: "Footer"
+        name: "footer"
+        file: "content/components/footer.md"
+        fields:
+          - {label: Email , name: email, widget: string}
+          - {label: Phone , name: phone, widget: string}
+          - {label: Phone Display , name: phoneDisplay, widget: string}
+          - {label: LinkedIn , name: linkedIn, widget: string}
+          - {label: Medium , name: medium, widget: string}
+          - {label: Twitter , name: twitter, widget: string}
+          - {label: Content , name: body, widget: markdown}
+      - label: "Get In Touch"
+        name: "get-intouch"
+        file: "content/components/get-intouch.md"
+        fields:
+          - {label: Title , name: title, widget: string}
+          - {label: Image , name: bgImage, widget: image}
+          - {label: Image Alt, name: bgImageAlt, widget: string}
+          - {label: Image Title, name: bgImageTitle, widget: string}
+          - {label: Button Text, name: buttonText, widget: string}
   #   label: "Blog"
   #   folder: "content/blog"
   #   create: true
