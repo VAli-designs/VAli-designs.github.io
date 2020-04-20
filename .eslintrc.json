@@ -1,0 +1,75 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["react-hooks", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "tabWidth": 2
+      }
+    ],
+
+    "arrow-parens": "off",
+
+    "func-names": "off",
+
+    "no-console": "warn",
+
+    "global-require": "off",
+
+    "no-use-before-define": "off",
+
+    "no-shadow": "off",
+
+    "no-param-reassign": "off",
+
+    "new-cap": "off",
+
+    "no-plusplus": "off",
+
+    "no-extra-boolean-cast": "off",
+
+    "no-underscore-dangle": "off",
+
+    "no-restricted-properties": "off",
+
+    "no-restricted-globals": "off",
+
+    "no-prototype-builtins": "off",
+
+    "no-multi-assign": "off",
+    "no-nested-ternary": "off",
+
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ],
+
+    "import/no-named-as-default": "off",
+
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-array-index-key": "off",
+    "react/no-multi-comp": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/sort-comp": "off",
+    "react/no-unescaped-entities": "off",
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
