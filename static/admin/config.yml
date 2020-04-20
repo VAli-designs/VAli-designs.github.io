@@ -1,0 +1,154 @@
+backend:
+  name: git-gateway
+
+# when using the default proxy server port
+local_backend: true
+site_url: http://localhost:8000/
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/pages/index.md"
+        fields:
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: string}
+          - {label: Title, name: title, widget: string}
+          - {label: tags , name: tags, widget: string}
+          - {label: contactButtonText , name: contactButtonText, widget: string}
+          - label: First Lame
+            name: firstLame
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Title, name: subTitle, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Read More Button Text, name: readMoreButtonText, widget: string}
+              - {label: Read More Button Link, name: readMoreButtonLink, widget: string}
+              - {label: Content, name: body, widget: markdown}
+          - {label: Services Title , name: servicesTitle, widget: string}
+          - label: Services
+            name: services
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: content, widget: list}
+          - {label: Services Button Text , name: servicesButtonText, widget: string}
+          - {label: Studies Title , name: studiesTitle, widget: string}
+          - label: Studies
+            name: studies
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Path, name: path, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: content, widget: text}
+          - {label: Studies Button Text , name: studiesButtonText, widget: string}
+          - {label: Content, name: body, widget: markdown}
+      - label: "Studies Page"
+        name: "studies"
+        file: "content/pages/studies.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: string}
+          - {label: DiscoverButtonText , name: discoverButtonText, widget: string}
+      - label: "Services Page"
+        name: "services"
+        file: "content/pages/services.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: SubTitle, name: subTitle, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: string}
+          - {label: Content, name: body, widget: markdown}
+          - label: First Lame
+            name: firstLame
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: body, widget: markdown}
+          - label: Cards
+            name: cards
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Other Lames
+            name: otherLames
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Color, name: color, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: body, widget: markdown}
+          - label: Process
+            name: processDescr
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Studies For, name: studiesFor, widget: string}
+              - {label: Content, name: body, widget: markdown}
+              - label: Items
+                name: items
+                collapsed: false
+                widget: list
+                fields:
+                  - {label: Label, name: label, widget: string}
+                  - {label: Color, name: color, widget: string}
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/pages/contact.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: string}
+          - {label: Email , name: email, widget: string}
+          - {label: Phone , name: phone, widget: string}
+          - {label: Phone Display , name: phoneDisplay, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Image Alt, name: imageAlt, widget: string}
+          - {label: Image Title, name: imageTitle, widget: string}
+          - {label: Send Email Button Text, name: sendEmailButton, widget: string}
+          - {label: Content, name: body, widget: markdown}
+  
+          # - name: "blog"
+  #   label: "Blog"
+  #   folder: "content/blog"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   editor:
+  #    preview: false
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Publish Date", name: "date", widget: "datetime" }
+  #     - { label: "Description", name: "description", widget: "string" }
+  #     - { label: "Body", name: "body", widget: "markdown" 

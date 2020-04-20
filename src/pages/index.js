@@ -26,12 +26,7 @@ const IndexPage = ({
         title,
         tags,
         contactButtonText,
-        firstLame: {
-          childMarkdownRemark: {
-            frontmatter: firstLameAttributes,
-            content: firstLameContent,
-          },
-        },
+        firstLame,
         servicesTitle,
         services,
         servicesButtonText,
@@ -118,7 +113,7 @@ const IndexPage = ({
         </div>
       </section>
       <section
-        title={firstLameAttributes.title}
+        title={firstLame.title}
         css={{
           display: 'flex',
           maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
@@ -127,8 +122,9 @@ const IndexPage = ({
         <Img
           css={{ width: '58%', flexShrink: 0 }}
           imgStyle={{ objectPosition: 'top center' }}
-          fluid={firstLameAttributes.image.childImageSharp.fluid}
-          alt={firstLameAttributes.title}
+          fluid={firstLame.image.childImageSharp.fluid}
+          alt={firstLame.imageAlt}
+          title={firstLame.imageTitle}
         />
         <div
           css={{
@@ -151,7 +147,7 @@ const IndexPage = ({
               marginBottom: 10,
             }}
           >
-            {firstLameAttributes.title}
+            {firstLame.title}
           </h2>
           <h3
             css={{
@@ -162,17 +158,17 @@ const IndexPage = ({
               marginBottom: 40,
             }}
           >
-            {firstLameAttributes.subTitle}
+            {firstLame.subTitle}
           </h3>
           <p
             css={{ fontSize: fontSizes.medium }}
-            dangerouslySetInnerHTML={{ __html: firstLameContent }}
+            dangerouslySetInnerHTML={{ __html: firstLame.body }}
           />
           <Link
-            to="/contact"
+            to={firstLame.readMoreButtonLink}
             css={[linkStyle(colors.orange, colors.pink), { marginTop: 40 }]}
           >
-            {firstLameAttributes.readModeButtonText}
+            {firstLame.readMoreButtonText}
           </Link>
         </div>
       </section>
@@ -391,7 +387,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/pages/index/index.md/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/pages/index.md/" }) {
       content: html
       frontmatter {
         metaDescription
@@ -400,21 +396,20 @@ export const pageQuery = graphql`
         tags
         contactButtonText
         firstLame {
-          childMarkdownRemark {
-            frontmatter {
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 2580) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2580) {
+                ...GatsbyImageSharpFluid
               }
-              title
-              subTitle
-              readModeButtonText
             }
-            content: html
           }
+          imageAlt
+          imageTitle
+          title
+          subTitle
+          readMoreButtonText
+          readMoreButtonLink
+          body
         }
         servicesTitle
         services {

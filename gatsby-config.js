@@ -16,16 +16,10 @@ module.exports = {
     twitter: 'http://www.twitter.com/AllAboutUsers',
   },
   plugins: [
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: path.join(__dirname, 'src', 'images'),
-      },
-    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -47,20 +41,6 @@ module.exports = {
         path: path.join(__dirname, 'content', 'studies'),
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'projects',
-    //     path: path.join(__dirname, 'content', 'projects'),
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'blog',
-    //     path: path.join(__dirname, 'content', 'blog'),
-    //   },
-    // },
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-transformer-remark`,

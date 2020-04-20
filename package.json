@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop"
+    "build": "NODE_ENV=production gatsby build",
+    "develop": "NODE_ENV=development gatsby develop"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -14,6 +14,7 @@
     "gatsby-background-image": "^1.0.1",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-emotion": "^4.2.1",
+    "gatsby-plugin-netlify-cms": "^4.2.4",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-remark-images": "^3.2.2",
@@ -22,10 +23,13 @@
     "gatsby-transformer-sharp": "^2.4.4",
     "gh-pages": "^2.2.0",
     "lodash.kebabcase": "^4.1.1",
+    "netlify-cms-app": "^2.12.9",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

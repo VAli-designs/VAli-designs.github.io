@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
 import { mediaQuery, colors, fonts, fontSizes, fontWeights } from '../theme';
 
-const IndexPage = ({
+const ServicePage = ({
   data: {
     markdownRemark: {
       content,
@@ -19,20 +19,10 @@ const IndexPage = ({
         metaTitle,
         title,
         subTitle,
-        firstLame: {
-          childMarkdownRemark: {
-            frontmatter: firstLameAttributes,
-            content: firstLameContent,
-          },
-        },
+        firstLame,
         cards,
         otherLames,
-        process: {
-          childMarkdownRemark: {
-            frontmatter: processAttributes,
-            html: processContent,
-          },
-        },
+        processDescr,
       },
     },
   },
@@ -83,10 +73,7 @@ const IndexPage = ({
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </section>
-    <Lame
-      attibutes={{ ...firstLameAttributes, color: colors.cyan }}
-      content={firstLameContent}
-    />
+    <Lame lame={{ ...firstLame, color: colors.cyan }} />
     <section
       css={{
         display: 'flex',
@@ -133,11 +120,11 @@ const IndexPage = ({
         </div>
       ))}
     </section>
-    {otherLames.map(({ childMarkdownRemark: { frontmatter, content } }) => (
-      <Lame attibutes={frontmatter} content={content} />
+    {otherLames.map((lame) => (
+      <Lame lame={lame} />
     ))}
     <section
-      title={processAttributes.title}
+      title={processDescr.title}
       css={{ padding: '80px 0', width: 900, margin: 'auto' }}
     >
       <h2
@@ -148,11 +135,11 @@ const IndexPage = ({
           marginBottom: 40,
         }}
       >
-        {processAttributes.title}
+        {processDescr.title}
       </h2>
       <p
         css={{ fontSize: fontSizes.large }}
-        dangerouslySetInnerHTML={{ __html: processContent }}
+        dangerouslySetInnerHTML={{ __html: processDescr.body }}
       />
       <h3
         css={{
@@ -163,10 +150,10 @@ const IndexPage = ({
           marginBottom: 40,
         }}
       >
-        {processAttributes.studiesFor}
+        {processDescr.studiesFor}
       </h3>
       <div css={{ display: 'flex', justifyContent: 'space-between' }}>
-        {processAttributes.items.map(({ color, label }) => (
+        {processDescr.items.map(({ color, label }) => (
           <div
             css={{
               width: 220,
@@ -190,11 +177,11 @@ const IndexPage = ({
   </>
 );
 
-export default IndexPage;
+export default ServicePage;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/pages/services/index.md/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/pages/services.md/" }) {
       content: html
       frontmatter {
         metaDescription
@@ -202,21 +189,17 @@ export const pageQuery = graphql`
         title
         subTitle
         firstLame {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 2580) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2580) {
+                ...GatsbyImageSharpFluid
               }
-              imageAlt
-              imageTitle
             }
-            content: html
           }
+          imageAlt
+          imageTitle
+          body
         }
         cards {
           title
@@ -232,55 +215,47 @@ export const pageQuery = graphql`
           content
         }
         otherLames {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              color
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 2580) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+          title
+          color
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2580) {
+                ...GatsbyImageSharpFluid
               }
-              imageAlt
-              imageTitle
             }
-            content: html
           }
+          imageAlt
+          imageTitle
+          body
         }
-        process {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              studiesFor
-              items {
-                label
-                color
-              }
-            }
-            html
+        processDescr {
+          title
+          studiesFor
+          items {
+            label
+            color
           }
+          body
         }
       }
     }
   }
 `;
 
-const Lame = ({ attibutes, content }) => (
+const Lame = ({ lame }) => (
   <section
-    title={attibutes.title}
+    title={lame.title}
     css={{ display: 'flex', height: `calc(98vh - ${HEADER_HEIGHT}px)` }}
   >
     <Img
       css={{ width: '58%', flexShrink: 0 }}
       imgStyle={{ objectPosition: 'top center' }}
-      fluid={attibutes.image.childImageSharp.fluid}
-      alt={attibutes.title}
+      fluid={lame.image.childImageSharp.fluid}
+      alt={lame.title}
     />
     <div
       css={{
-        background: attibutes.color,
+        background: lame.color,
         width: '42%',
         flexShrink: 0,
         padding: '50px 100px',
@@ -299,7 +274,7 @@ const Lame = ({ attibutes, content }) => (
           marginBottom: 10,
         }}
       >
-        {attibutes.title}
+        {lame.title}
       </h2>
       <h3
         css={{
@@ -310,11 +285,11 @@ const Lame = ({ attibutes, content }) => (
           marginBottom: 40,
         }}
       >
-        {attibutes.subTitle}
+        {lame.subTitle}
       </h3>
       <p
         css={{ fontSize: fontSizes.medium }}
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: lame.body }}
       />
     </div>
   </section>
