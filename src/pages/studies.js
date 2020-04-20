@@ -36,6 +36,7 @@ const StudiesPage = ({
           flexDirection: 'column',
           marginTop: HEADER_HEIGHT + 80,
           alignItems: 'center',
+          marginBottom: 60,
         }}
       >
         <h1

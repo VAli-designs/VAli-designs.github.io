@@ -36,6 +36,7 @@ export const fontSizes = {
 };
 
 export const mediaQuery = {
+  bigDesktop: '@media screen and (min-width: 1600px)',
   desktop: '@media screen and (min-width: 1025px)',
   notDesktop: '@media screen and (max-width: 1024px)',
   smartphone: '@media (max-width: 550px)',

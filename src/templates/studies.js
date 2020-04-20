@@ -70,6 +70,7 @@ const StudyPageTemplate = ({
             fontSize: fontSizes.medium,
             display: 'flex',
             flexDirection: 'column',
+            maxWidth: 800,
           }}
         >
           <h2
@@ -102,7 +103,7 @@ const StudyPageTemplate = ({
       title="client's need"
       css={{
         textAlign: 'center',
-        padding: 40,
+        padding: 60,
         color: 'white',
         background: color,
       }}
@@ -116,7 +117,14 @@ const StudyPageTemplate = ({
       >
         {clientNeedsTitle}
       </h2>
-      <p css={{ fontSize: fontSizes.medium, width: '70%', margin: 'auto' }}>
+      <p
+        css={{
+          fontSize: fontSizes.medium,
+          width: '70%',
+          maxWidth: 800,
+          margin: 'auto',
+        }}
+      >
         {clientNeedsContent}
       </p>
     </section>
@@ -125,8 +133,8 @@ const StudyPageTemplate = ({
         fontFamily: fonts.title,
         fontWeight: fontWeights.regular,
         fontSize: fontSizes.title,
-        textAlign: 'left',
         margin: '80px 120px  20px',
+        textAlign: 'center',
       }}
     >
       All About the process - {steps.length} steps
@@ -143,29 +151,42 @@ const StudyPageTemplate = ({
       ) => (
         <section
           key={index}
-          css={{
-            display: 'flex',
-            paddingBottom: 70,
-            paddingTop: 50,
-            paddingLeft: 120,
-            paddingRight: 120,
-            [mediaQuery.notDesktop]: {
-              paddingLeft: 40,
-              paddingRight: 40,
+          css={[
+            {
+              display: 'flex',
+              paddingBottom: 70,
+              paddingTop: 50,
+              marginLeft: 120,
+              marginRight: 120,
+              maxWidth: 1400,
+              [mediaQuery.bigDesktop]: {
+                margin: 'auto',
+              },
+              justifyContent: 'space-around',
             },
-            justifyContent: 'center',
-            background: index < steps.length - 1 ? 'none' : colors.lightGrey,
-          }}
+            index === steps.length - 1 && {
+              background: colors.lightGrey,
+              marginBottom: '120px !important',
+            },
+          ]}
         >
           <div
-            css={{
-              width: image ? '50%' : '60%',
-              marginRight: 60,
-              fontSize: fontSizes.medium,
-              display: 'flex',
-              flexDirection: 'column',
-              textAlign: image ? 'left' : 'center',
-            }}
+            css={[
+              {
+                width: '50%',
+                marginRight: 60,
+                fontSize: fontSizes.medium,
+                display: 'flex',
+                flexDirection: 'column',
+                maxWidth: 700,
+              },
+              !image && {
+                width: '60%',
+                marginRight: 0,
+                textAlign: 'center',
+                alignItems: 'center',
+              },
+            ]}
           >
             <h3
               css={{
@@ -179,12 +200,7 @@ const StudyPageTemplate = ({
               {index + 1}/{steps.length} <br />
               {title}
             </h3>
-            <p
-              css={{ flex: 1 }}
-              dangerouslySetInnerHTML={{
-                __html: html,
-              }}
-            />
+            <p css={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: html }} />
           </div>
           {image && (
             <Img
@@ -213,7 +229,7 @@ export const pageQuery = graphql`
         color
         mainImage {
           childImageSharp {
-            fluid(maxWidth: 1400) {
+            fluid(maxWidth: 2560) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -228,7 +244,7 @@ export const pageQuery = graphql`
               title
               image {
                 childImageSharp {
-                  fluid(maxWidth: 1400) {
+                  fluid(maxWidth: 2560) {
                     ...GatsbyImageSharpFluid
                   }
                 }

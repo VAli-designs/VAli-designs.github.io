@@ -284,6 +284,9 @@ const Lame = ({ attibutes, content }) => (
         width: '42%',
         flexShrink: 0,
         padding: '50px 100px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
       }}
     >
       <h2

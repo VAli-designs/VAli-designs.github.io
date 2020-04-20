@@ -119,7 +119,10 @@ const IndexPage = ({
       </section>
       <section
         title={firstLameAttributes.title}
-        css={{ display: 'flex', height: `calc(98vh - ${HEADER_HEIGHT}px)` }}
+        css={{
+          display: 'flex',
+          maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
+        }}
       >
         <Img
           css={{ width: '58%', flexShrink: 0 }}
@@ -133,6 +136,9 @@ const IndexPage = ({
             width: '42%',
             flexShrink: 0,
             padding: '50px 100px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
           }}
         >
           <h2
