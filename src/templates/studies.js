@@ -5,7 +5,10 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
-import HeaderMenu, { HEADER_HEIGHT } from '../components/HeaderMenu';
+import HeaderMenu, {
+  HEADER_HEIGHT,
+  HEADER_MOBILE_HEIGHT,
+} from '../components/HeaderMenu';
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
 import { fonts, fontSizes, fontWeights, colors, mediaQuery } from '../theme';
@@ -37,6 +40,9 @@ const StudyPageTemplate = ({
         display: 'flex',
         flexDirection: 'column',
         marginTop: HEADER_HEIGHT + 80,
+        [mediaQuery.notDesktop]: {
+          marginTop: HEADER_MOBILE_HEIGHT + 30,
+        },
       }}
     >
       <h1
@@ -47,6 +53,11 @@ const StudyPageTemplate = ({
           textAlign: 'left',
           marginBottom: 40,
           paddingLeft: 120,
+          [mediaQuery.notDesktop]: {
+            marginBottom: 30,
+            textAlign: 'center',
+            padding: '0 40px',
+          },
         }}
       >
         {title}
@@ -60,6 +71,9 @@ const StudyPageTemplate = ({
           [mediaQuery.notDesktop]: {
             paddingLeft: 40,
             paddingRight: 40,
+            marginBottom: 30,
+            flexDirection: 'column-reverse',
+            alignItems: 'center',
           },
         }}
       >
@@ -71,6 +85,10 @@ const StudyPageTemplate = ({
             display: 'flex',
             flexDirection: 'column',
             maxWidth: 800,
+            [mediaQuery.notDesktop]: {
+              width: 'auto',
+              marginRight: 0,
+            },
           }}
         >
           <h2
@@ -92,7 +110,18 @@ const StudyPageTemplate = ({
           />
         </div>
         <Img
-          css={{ flex: 1, maxHeight: 500 }}
+          css={{
+            flex: 1,
+            maxHeight: 500,
+            [mediaQuery.notDesktop]: {
+              flex: 0,
+              width: 'calc(100vw - 80px)',
+              maxWidth: 800,
+              maxHeight: 'calc(9 * (100vw - 80px) / 16)',
+              marginBottom: 20,
+              overflow: 'hidden',
+            },
+          }}
           fluid={mainImage.childImageSharp.fluid}
           alt={mainImageAlt}
           title={mainImageTitle}
@@ -106,6 +135,9 @@ const StudyPageTemplate = ({
         padding: 60,
         color: 'white',
         background: color,
+        [mediaQuery.smartphone]: {
+          padding: 30,
+        },
       }}
     >
       <h2
@@ -113,6 +145,12 @@ const StudyPageTemplate = ({
           marginBottom: 40,
           fontSize: fontSizes.smallTitle,
           fontFamily: fonts.title,
+          [mediaQuery.notDesktop]: {
+            marginBottom: 20,
+          },
+          [mediaQuery.smartphone]: {
+            fontSize: fontSizes.larger,
+          },
         }}
       >
         {clientNeedsTitle}
@@ -123,6 +161,9 @@ const StudyPageTemplate = ({
           width: '70%',
           maxWidth: 800,
           margin: 'auto',
+          [mediaQuery.notDesktop]: {
+            width: 'auto',
+          },
         }}
       >
         {clientNeedsContent}
@@ -135,6 +176,12 @@ const StudyPageTemplate = ({
         fontSize: fontSizes.title,
         margin: '80px 120px  20px',
         textAlign: 'center',
+        [mediaQuery.notDesktop]: {
+          margin: '30px 40px',
+        },
+        [mediaQuery.smartphone]: {
+          fontSize: fontSizes.larger,
+        },
       }}
     >
       All About the process - {steps.length} steps
@@ -150,14 +197,24 @@ const StudyPageTemplate = ({
             marginLeft: 120,
             marginRight: 120,
             maxWidth: 1400,
+            justifyContent: 'space-around',
             [mediaQuery.bigDesktop]: {
               margin: 'auto',
             },
-            justifyContent: 'space-around',
+            [mediaQuery.notDesktop]: {
+              paddingTop: 0,
+              marginLeft: 40,
+              marginRight: 40,
+              marginBottom: 40,
+              paddingBottom: 0,
+              flexDirection: 'column',
+            },
           },
           index === steps.length - 1 && {
             background: colors.lightGrey,
-            marginBottom: '120px !important',
+            [mediaQuery.desktop]: {
+              marginBottom: '120px !important',
+            },
           },
         ]}
       >
@@ -170,12 +227,23 @@ const StudyPageTemplate = ({
               display: 'flex',
               flexDirection: 'column',
               maxWidth: 700,
+              [mediaQuery.notDesktop]: {
+                width: 'auto !important',
+                textAlign: 'center',
+                marginRight: 0,
+                marginBottom: 20,
+                maxWidth: 'none',
+              },
             },
             !image && {
               width: '60%',
               marginRight: 0,
+              marginBottom: '0 !important',
               textAlign: 'center',
               alignItems: 'center',
+              [mediaQuery.notDesktop]: {
+                padding: 20,
+              },
             },
           ]}
         >
@@ -186,6 +254,12 @@ const StudyPageTemplate = ({
               fontWeight: fontWeights.regular,
               fontSize: fontSizes.title,
               marginBottom: 40,
+              [mediaQuery.notDesktop]: {
+                marginBottom: 20,
+              },
+              [mediaQuery.smartphone]: {
+                fontSize: fontSizes.larger,
+              },
             }}
           >
             {index + 1}/{steps.length} <br />

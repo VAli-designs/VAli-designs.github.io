@@ -5,7 +5,10 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
-import HeaderMenu, { HEADER_HEIGHT } from '../components/HeaderMenu';
+import HeaderMenu, {
+  HEADER_HEIGHT,
+  HEADER_MOBILE_HEIGHT,
+} from '../components/HeaderMenu';
 import Footer from '../components/Footer';
 import {
   mediaQuery,
@@ -75,12 +78,22 @@ const IndexPage = ({
           paddingLeft: 120,
           paddingRight: 120,
           [mediaQuery.notDesktop]: {
+            marginTop: HEADER_MOBILE_HEIGHT + 30,
+            marginBottom: 30,
             paddingLeft: 40,
             paddingRight: 40,
+            height: 'auto',
           },
         }}
       >
-        <div css={{ width: 960 }}>
+        <div
+          css={{
+            width: 960,
+            [mediaQuery.notDesktop]: {
+              width: '100%',
+            },
+          }}
+        >
           <h1
             css={{
               fontFamily: fonts.title,
@@ -120,7 +133,11 @@ const IndexPage = ({
         }}
       >
         <Img
-          css={{ width: '58%', flexShrink: 0 }}
+          css={{
+            width: '58%',
+            flexShrink: 0,
+            [mediaQuery.notDesktop]: { display: 'none' },
+          }}
           imgStyle={{ objectPosition: 'top center' }}
           fluid={firstLame.image.childImageSharp.fluid}
           alt={firstLame.imageAlt}
@@ -135,6 +152,11 @@ const IndexPage = ({
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
+            [mediaQuery.notDesktop]: {
+              width: '100%',
+              padding: 40,
+              height: 'auto',
+            },
           }}
         >
           <h2
@@ -184,10 +206,11 @@ const IndexPage = ({
           paddingRight: 120,
           background: colors.lightGrey,
           marginTop: 100,
-
           [mediaQuery.notDesktop]: {
             paddingLeft: 40,
             paddingRight: 40,
+            marginTop: 30,
+            height: 'auto',
           },
         }}
       >
@@ -209,6 +232,9 @@ const IndexPage = ({
               background: colors.dark,
               left: 'calc(50% - 15px)',
             },
+            [mediaQuery.smartphone]: {
+              textAlign: 'center',
+            },
           }}
         >
           {servicesTitle}
@@ -220,6 +246,10 @@ const IndexPage = ({
             width: '100%',
             justifyContent: 'space-around',
             alignItems: 'flex-start',
+            [mediaQuery.smartphone]: {
+              flexDirection: 'column',
+              alignItems: 'center',
+            },
           }}
         >
           {services.map(
@@ -231,6 +261,9 @@ const IndexPage = ({
                   display: 'inline-block',
                   textAlign: 'center',
                   fontSize: fontSizes.medium,
+                  [mediaQuery.smartphone]: {
+                    marginBottom: 30,
+                  },
                 }}
               >
                 <Img
@@ -288,6 +321,11 @@ const IndexPage = ({
           marginTop: 100,
           paddingLeft: 60,
           paddingRight: 60,
+          [mediaQuery.notDesktop]: {
+            minHeight: '40vh',
+            marginTop: 30,
+            padding: 40,
+          },
         }}
       >
         <h2
@@ -310,8 +348,17 @@ const IndexPage = ({
               justifyContent: 'space-between',
               alignItems: 'flex-start',
               transition: 'opacity 1.2s ease-in',
+              [mediaQuery.smartphone]: {
+                flexDirection: 'column',
+                alignItems: 'center',
+              },
             },
-            !studiesVisible && { opacity: 0 },
+            !studiesVisible && {
+              opacity: 0,
+              [mediaQuery.smartphone]: {
+                opacity: 1,
+              },
+            },
           ]}
         >
           {studies.map(
@@ -329,9 +376,13 @@ const IndexPage = ({
                     transition:
                       'all 0.5s ease, opacity 500ms ease 0s !important',
                   },
-                  ':hover img': {
+                  ':hover img,:active img': {
                     transform: 'scale(1.1)',
                     filter: 'brightness(50%)',
+                  },
+                  [mediaQuery.smartphone]: {
+                    width: 'auto',
+                    marginBottom: 30,
                   },
                 }}
                 href={path}
@@ -342,6 +393,10 @@ const IndexPage = ({
                     width: 'calc((100vw - 120px - 80px) / 3)',
                     height: 'calc((3 / 4) * (100vw - 120px - 80px) / 3)',
                     display: 'inline-block',
+                    [mediaQuery.smartphone]: {
+                      width: 'calc((100vw - 80px))',
+                      height: 'calc((3 / 4) * (100vw - 80px))',
+                    },
                   }}
                   imgStyle={{ objectPosition: 'top center' }}
                   fluid={image.childImageSharp.fluid}

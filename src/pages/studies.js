@@ -5,10 +5,20 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
-import HeaderMenu, { HEADER_HEIGHT } from '../components/HeaderMenu';
+import HeaderMenu, {
+  HEADER_HEIGHT,
+  HEADER_MOBILE_HEIGHT,
+} from '../components/HeaderMenu';
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
-import { fonts, fontSizes, fontWeights, linkStyle, colors } from '../theme';
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  linkStyle,
+  colors,
+  mediaQuery,
+} from '../theme';
 
 const StudiesPage = ({
   data: {
@@ -34,6 +44,13 @@ const StudiesPage = ({
           marginTop: HEADER_HEIGHT + 80,
           alignItems: 'center',
           marginBottom: 60,
+          [mediaQuery.notDesktop]: {
+            marginTop: HEADER_MOBILE_HEIGHT + 30,
+            marginBottom: 10,
+            paddingLeft: 40,
+            paddingRight: 40,
+            height: 'auto',
+          },
         }}
       >
         <h1
@@ -43,6 +60,7 @@ const StudiesPage = ({
             fontSize: fontSizes.title,
             textAlign: 'center',
             marginBottom: 80,
+            [mediaQuery.notDesktop]: { marginBottom: 40 },
           }}
         >
           {title}
@@ -60,9 +78,16 @@ const StudiesPage = ({
             <div
               css={{
                 display: 'flex',
+                position: 'relative',
                 width: 980,
                 height: 440,
                 marginBottom: 60,
+                [mediaQuery.notDesktop]: {
+                  width: 'auto',
+                  height: 'auto',
+                  flexDirection: 'column',
+                  marginBottom: 30,
+                },
               }}
             >
               <div
@@ -74,6 +99,9 @@ const StudiesPage = ({
                   fontSize: fontSizes.medium,
                   display: 'flex',
                   flexDirection: 'column',
+                  [mediaQuery.notDesktop]: {
+                    width: 'auto',
+                  },
                 }}
               >
                 <h2
@@ -82,6 +110,9 @@ const StudiesPage = ({
                     fontWeight: fontWeights.regular,
                     fontSize: fontSizes.larger,
                     marginBottom: 40,
+                    [mediaQuery.notDesktop]: {
+                      marginBottom: 'calc((100vw - 80px) / 2 + 40px)',
+                    },
                   }}
                 >
                   {title}
@@ -96,14 +127,30 @@ const StudiesPage = ({
                   to={`/studies/${id}`}
                   css={[
                     linkStyle(colors.lightGrey, colors.text),
-                    { color: colors.dark, alignSelf: 'center' },
+                    {
+                      color: colors.dark,
+                      alignSelf: 'center',
+                      [mediaQuery.notDesktop]: {
+                        alignSelf: 'flex-start',
+                        marginTop: 20,
+                      },
+                    },
                   ]}
                 >
                   {discoverButtonText}
                 </Link>
               </div>
               <Img
-                css={{ width: '65%' }}
+                css={{
+                  width: '65%',
+                  [mediaQuery.notDesktop]: {
+                    width: '100%',
+                    height: 'calc((100vw - 80px) / 2)',
+                    position: 'absolute !important',
+                    top: 90,
+                    left: 0,
+                  },
+                }}
                 fluid={mainImage.childImageSharp.fluid}
                 alt={mainImageAlt}
                 title={mainImageTitle}

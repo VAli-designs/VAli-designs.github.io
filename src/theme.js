@@ -26,19 +26,21 @@ export const fontWeights = {
 };
 
 export const fontSizes = {
-  title: 54,
-  smallTitle: 42,
-  larger: 36,
-  large: 28,
-  mediumLarge: 24,
-  medium: 22,
-  normal: 18,
+  title: '5.4rem',
+  smallTitle: '4.2rem',
+  larger: '3.6rem',
+  large: '2.8rem',
+  mediumLarge: '2.4rem',
+  medium: '2.2rem',
+  normal: '1.8rem',
 };
 
 export const mediaQuery = {
   bigDesktop: '@media screen and (min-width: 1600px)',
   desktop: '@media screen and (min-width: 1025px)',
   notDesktop: '@media screen and (max-width: 1024px)',
+  landscape: '@media (orientation: landscape)',
+  portr: '@media (orientation: portrait)',
   smartphone: '@media (max-width: 550px)',
   tablette: '@media (min-width: 550px) and (max-width: 1024px)',
 };

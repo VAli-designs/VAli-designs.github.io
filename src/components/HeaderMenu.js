@@ -44,6 +44,7 @@ const HeaderMenu = (props) => {
         }}
       >
         <div
+          role="img"
           css={{
             background: 'black',
             fontSize: 30,

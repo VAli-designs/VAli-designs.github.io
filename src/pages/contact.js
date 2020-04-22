@@ -76,7 +76,7 @@ const ContactPage = ({
       >
         <span
           css={{
-            fontSize: 38,
+            fontSize: '3.8rem',
             display: 'inline-block',
             marginRight: 10,
             position: 'relative',
@@ -102,7 +102,7 @@ const ContactPage = ({
       >
         <span
           css={{
-            fontSize: 26,
+            fontSize: '2.6rem',
             display: 'inline-block',
             marginRight: 10,
             position: 'relative',

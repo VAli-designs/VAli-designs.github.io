@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { fonts, fontWeights, colors, fontSizes } from '../theme';
+import { fonts, fontWeights, colors, fontSizes, mediaQuery } from '../theme';
 
 const Footer = () => {
   const {
@@ -32,6 +32,11 @@ const Footer = () => {
           maxWidth: 1400,
           margin: 'auto',
           justifyContent: 'space-between',
+          [mediaQuery.notDesktop]: {
+            flexDirection: 'column',
+            padding: 40,
+            alignItems: 'center',
+          },
         }}
       >
         <div
@@ -39,6 +44,11 @@ const Footer = () => {
             flexShrink: 0,
             marginRight: 100,
             maxWidth: 550,
+            [mediaQuery.notDesktop]: {
+              marginRight: 0,
+              marginBottom: 30,
+              textAlign: 'center',
+            },
           }}
         >
           <h3
@@ -49,6 +59,9 @@ const Footer = () => {
               alignSelf: 'center',
               marginBottom: 40,
               position: 'relative',
+              [mediaQuery.notDesktop]: {
+                marginBottom: 20,
+              },
             }}
           >
             About
@@ -64,6 +77,9 @@ const Footer = () => {
             display: 'flex',
             flexDirection: 'column',
             fontSize: fontSizes.medium,
+            [mediaQuery.notDesktop]: {
+              alignItems: 'center',
+            },
           }}
         >
           <h3
@@ -73,6 +89,10 @@ const Footer = () => {
               fontSize: fontSizes.smallTitle,
               position: 'relative',
               marginBottom: 40,
+              [mediaQuery.notDesktop]: {
+                marginBottom: 20,
+                textAlign: 'center',
+              },
             }}
           >
             Get in touch
@@ -85,7 +105,11 @@ const Footer = () => {
               a: {
                 color: colors.dark,
                 textDecoration: 'none',
-                ':hover': { textDecoration: 'underline' },
+                ':hover, :active': { textDecoration: 'underline' },
+              },
+
+              [mediaQuery.notDesktop]: {
+                marginBottom: 20,
               },
             }}
           >
@@ -93,7 +117,7 @@ const Footer = () => {
               <a href={`mailto:${email}`}>
                 <span
                   css={{
-                    fontSize: 38,
+                    fontSize: '3.8rem',
                     display: 'inline-block',
                     marginRight: 10,
                     position: 'relative',
@@ -112,7 +136,7 @@ const Footer = () => {
               <a href={`tel:${phone}`}>
                 <span
                   css={{
-                    fontSize: 26,
+                    fontSize: '2.6rem',
                     display: 'inline-block',
                     marginRight: 10,
                     position: 'relative',
@@ -127,7 +151,14 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div css={{ flex: 1 }} />
+          <div
+            css={{
+              flex: 1,
+              [mediaQuery.notDesktop]: {
+                display: 'none',
+              },
+            }}
+          />
           <ul
             css={{
               margin: 0,

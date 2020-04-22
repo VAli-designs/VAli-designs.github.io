@@ -2,7 +2,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { colors, linkStyle, fonts, fontWeights, fontSizes } from '../theme';
+import {
+  colors,
+  linkStyle,
+  fonts,
+  fontWeights,
+  fontSizes,
+  mediaQuery,
+} from '../theme';
 
 const GetInTouch = () => {
   const {
@@ -34,7 +41,14 @@ const GetInTouch = () => {
   `);
 
   return (
-    <section title={title} css={{ height: 400, position: 'relative' }}>
+    <section
+      title={title}
+      css={{
+        height: 400,
+        position: 'relative',
+        [mediaQuery.notDesktop]: { height: 300 },
+      }}
+    >
       <Img
         fluid={bgImage.childImageSharp.fluid}
         style={{ position: 'absolute', height: '100%', width: '100%' }}

@@ -5,7 +5,10 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
-import HeaderMenu, { HEADER_HEIGHT } from '../components/HeaderMenu';
+import HeaderMenu, {
+  HEADER_HEIGHT,
+  HEADER_MOBILE_HEIGHT,
+} from '../components/HeaderMenu';
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
 import { mediaQuery, colors, fonts, fontSizes, fontWeights } from '../theme';
@@ -43,8 +46,11 @@ const ServicePage = ({
         paddingLeft: 120,
         paddingRight: 120,
         [mediaQuery.notDesktop]: {
+          marginTop: HEADER_MOBILE_HEIGHT + 30,
+          marginBottom: 30,
           paddingLeft: 40,
           paddingRight: 40,
+          height: 'auto',
         },
       }}
     >
@@ -81,6 +87,14 @@ const ServicePage = ({
         justifyContent: 'center',
         marginTop: 80,
         marginBottom: 80,
+        [mediaQuery.notDesktop]: {
+          flexDirection: 'column',
+          alignItems: 'center',
+          marginBottom: 30,
+          marginTop: 30,
+          paddingLeft: 40,
+          paddingRight: 40,
+        },
       }}
     >
       {cards.map(({ title, image, imageAlt, imageTitle, content }, index) => (
@@ -90,8 +104,15 @@ const ServicePage = ({
             width: `calc(100vw / ${cards.length} - 200px)`,
             textAlign: 'center',
             fontSize: fontSizes.medium,
-            ':not(:last-of-type)': {
-              marginRight: 100,
+            [mediaQuery.desktop]: {
+              ':not(:last-of-type)': {
+                marginRight: 100,
+              },
+            },
+            [mediaQuery.notDesktop]: {
+              width: 'auto',
+              marginBottom: 30,
+              textAlign: 'center',
             },
           }}
         >
@@ -100,6 +121,10 @@ const ServicePage = ({
               display: 'inline-block',
               width: `calc(100vw / ${cards.length} - 200px)`,
               height: `calc(2 * (100vh - ${HEADER_HEIGHT}px) / 3)`,
+              [mediaQuery.notDesktop]: {
+                width: `calc(100vw - 40px)`,
+                height: `calc(2 * (100vw - 40px) / 3)`,
+              },
             }}
             imgStyle={{ objectPosition: 'top center' }}
             fluid={image.childImageSharp.fluid}
@@ -125,7 +150,16 @@ const ServicePage = ({
     ))}
     <section
       title={processDescr.title}
-      css={{ padding: '80px 0', width: 900, margin: 'auto' }}
+      css={{
+        padding: '80px 0',
+        width: 900,
+        margin: 'auto',
+        [mediaQuery.notDesktop]: {
+          padding: '30px  40px',
+          width: 'auto',
+          margin: 0,
+        },
+      }}
     >
       <h2
         css={{
@@ -133,6 +167,9 @@ const ServicePage = ({
           fontWeight: fontWeights.semibold,
           fontSize: fontSizes.title,
           marginBottom: 40,
+          [mediaQuery.notDesktop]: {
+            marginBottom: 20,
+          },
         }}
       >
         {processDescr.title}
@@ -148,11 +185,24 @@ const ServicePage = ({
           fontSize: fontSizes.larger,
           marginTop: 40,
           marginBottom: 40,
+          [mediaQuery.notDesktop]: {
+            marginTop: 20,
+            marginBottom: 20,
+          },
         }}
       >
         {processDescr.studiesFor}
       </h3>
-      <div css={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div
+        css={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          [mediaQuery.notDesktop]: {
+            flexDirection: 'column',
+            alignItems: 'center',
+          },
+        }}
+      >
         {processDescr.items.map(({ color, label }) => (
           <div
             css={{
@@ -162,9 +212,14 @@ const ServicePage = ({
               alignItems: 'center',
               justifyContent: 'center',
               textAlign: 'center',
-              fontSize: 30,
+              fontSize: '3.0rem',
               background: color,
               color: 'white',
+              [mediaQuery.notDesktop]: {
+                width: 'calc(100vw - 80px)',
+                height: 'calc((100vw - 80px) / 3)',
+                marginBottom: 5,
+              },
             }}
           >
             {label}
@@ -245,10 +300,14 @@ export const pageQuery = graphql`
 const Lame = ({ lame }) => (
   <section
     title={lame.title}
-    css={{ display: 'flex', height: `calc(98vh - ${HEADER_HEIGHT}px)` }}
+    css={{ display: 'flex', maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)` }}
   >
     <Img
-      css={{ width: '58%', flexShrink: 0 }}
+      css={{
+        width: '58%',
+        flexShrink: 0,
+        [mediaQuery.notDesktop]: { display: 'none' },
+      }}
       imgStyle={{ objectPosition: 'top center' }}
       fluid={lame.image.childImageSharp.fluid}
       alt={lame.title}
@@ -262,6 +321,11 @@ const Lame = ({ lame }) => (
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        [mediaQuery.notDesktop]: {
+          width: '100%',
+          padding: 40,
+          height: 'auto',
+        },
       }}
     >
       <h2
@@ -271,22 +335,12 @@ const Lame = ({ lame }) => (
           fontSize: fontSizes.larger,
           fontStyle: 'italic',
           letterSpacing: 5,
-          marginBottom: 10,
+          marginBottom: 40,
+          [mediaQuery.notDesktop]: { marginBottom: 20 },
         }}
       >
         {lame.title}
       </h2>
-      <h3
-        css={{
-          fontFamily: fonts.title,
-          fontWeight: fontWeights.regular,
-          fontSize: fontSizes.large,
-          fontStyle: 'italic',
-          marginBottom: 40,
-        }}
-      >
-        {lame.subTitle}
-      </h3>
       <p
         css={{ fontSize: fontSizes.medium }}
         dangerouslySetInnerHTML={{ __html: lame.body }}
