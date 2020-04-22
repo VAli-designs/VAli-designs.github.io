@@ -55,5 +55,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `All About Users`,
+        short_name: `All About Users`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `browser`,
+        icon: `src/img/logo.png`,
+      },
+    },
   ],
 };

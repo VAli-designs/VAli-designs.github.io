@@ -139,6 +139,13 @@ collections:
           - {label: Image Title, name: imageTitle, widget: string}
           - {label: Send Email Button Text, name: sendEmailButton, widget: string}
           - {label: Content, name: body, widget: markdown}
+      - label: "404 Page"
+        name: "404"
+        file: "content/pages/404.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text, pattern: ['.{,158}', "Must have at less than 158 characters"]}
   
           # - name: "blog"
   - label: "Components"
