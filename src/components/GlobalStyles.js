@@ -9,7 +9,7 @@ const GlobalStyles = () => (
       html {
         font-size: 62.5%;
         ${mediaQuery.smartphone} {
-          font-size: 37.5%;
+          font-size: 41.5%;
         }
       }
 

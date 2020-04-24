@@ -6,7 +6,7 @@ const Footer = () => {
   const {
     markdownRemark: {
       html,
-      frontmatter: { email, phone, phoneDisplay, linkedIn, medium, twitter },
+      frontmatter: { email, phone, phoneDisplay, linkedIn, twitter },
     },
   } = useStaticQuery(graphql`
     query {
@@ -17,7 +17,6 @@ const Footer = () => {
           phone
           phoneDisplay
           linkedIn
-          medium
           twitter
         }
       }
@@ -29,7 +28,10 @@ const Footer = () => {
         css={{
           padding: '60px 120px',
           display: 'flex',
-          maxWidth: 1400,
+          maxWidth: 1200,
+          [mediaQuery.bigDesktop]: {
+            maxWidth: 1400,
+          },
           margin: 'auto',
           justifyContent: 'space-between',
           [mediaQuery.notDesktop]: {
@@ -67,7 +69,10 @@ const Footer = () => {
             About
           </h3>
           <p
-            css={{ fontSize: fontSizes.medium }}
+            css={{
+              fontSize: fontSizes.medium,
+              [mediaQuery.smartphone]: { fontSize: fontSizes.mediumLarge },
+            }}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
@@ -80,6 +85,7 @@ const Footer = () => {
             [mediaQuery.notDesktop]: {
               alignItems: 'center',
             },
+            [mediaQuery.smartphone]: { fontSize: fontSizes.mediumLarge },
           }}
         >
           <h3
@@ -90,7 +96,7 @@ const Footer = () => {
               position: 'relative',
               marginBottom: 40,
               [mediaQuery.notDesktop]: {
-                marginBottom: 20,
+                marginBottom: 10,
                 textAlign: 'center',
               },
             }}
@@ -174,9 +180,6 @@ const Footer = () => {
           >
             <li>
               <a href={linkedIn}>LinkedIn</a>
-            </li>
-            <li>
-              <a href={medium}>Medium</a>
             </li>
             <li>
               <a href={twitter}>Twitter</a>

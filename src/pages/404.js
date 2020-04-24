@@ -2,12 +2,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
 import HeaderMenu, { HEADER_HEIGHT } from '../components/HeaderMenu';
 import Footer from '../components/Footer';
-import { fonts, fontSizes, fontWeights, linkStyle, colors } from '../theme';
+import { fonts, fontSizes, fontWeights } from '../theme';
 import GetInTouch from '../components/GetInTouch';
 
 const Page404 = ({

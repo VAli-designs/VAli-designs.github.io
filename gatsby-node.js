@@ -6,11 +6,14 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const {
     data: {
-      allFile: { nodes },
+      studies: { nodes: studies },
+      posts: { nodes: posts },
     },
   } = await graphql(`
     query {
-      allFile(filter: { absolutePath: { regex: "//studies/.*[.]md$/" } }) {
+      studies: allFile(
+        filter: { absolutePath: { regex: "//studies/.*[.]md$/" } }
+      ) {
         nodes {
           absolutePath
           childMarkdownRemark {
@@ -20,13 +23,26 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      posts: allFile(filter: { absolutePath: { regex: "//blog/.*[.]md$/" } }) {
+        nodes {
+          absolutePath
+          name
+        }
+      }
     }
   `);
 
-  nodes.forEach((node) => {
+  studies.forEach((node) => {
     createPage({
       path: `/studies/${node.childMarkdownRemark.frontmatter.id}/`,
       component: path.resolve(`./src/templates/studies.js`),
+      context: { sourcePath: node.absolutePath },
+    });
+  });
+  posts.forEach((node) => {
+    createPage({
+      path: `/blog/${node.name}/`,
+      component: path.resolve(`./src/templates/article.js`),
       context: { sourcePath: node.absolutePath },
     });
   });
@@ -49,8 +65,15 @@ const recursiveTransform = (attr) => {
       val.forEach(recursiveTransform);
     } else if (typeof val === 'object') {
       recursiveTransform(val);
-    } else if (key === 'body' && typeof val === 'string') {
-      attr[key] = remark().use(remarkHTML).processSync(val).toString();
+    } else if (
+      (key === 'body' || key === 'excerpt') &&
+      typeof val === 'string'
+    ) {
+      attr[key] = remark()
+        .use({ settings: { commonmark: true } })
+        .use(remarkHTML)
+        .processSync(val)
+        .toString();
     }
   });
 };

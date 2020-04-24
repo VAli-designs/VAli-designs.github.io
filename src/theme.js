@@ -6,8 +6,7 @@ export const colors = {
   pink: 'rgb(237, 69, 160)',
   cyan: 'rgb(214, 236,232)',
   dark: '#141B1F',
-  darkGrey: '#333',
-  semiDarkGrey: '#444',
+  darkGrey: '#999',
   grey: 'rgb(209,210,211)',
   lightGrey: 'rgb(240,240,240)',
 };
@@ -33,6 +32,7 @@ export const fontSizes = {
   mediumLarge: '2.4rem',
   medium: '2.2rem',
   normal: '1.8rem',
+  small: '1.6rem',
 };
 
 export const mediaQuery = {

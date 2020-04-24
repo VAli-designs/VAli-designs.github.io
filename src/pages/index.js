@@ -99,6 +99,7 @@ const IndexPage = ({
               fontFamily: fonts.title,
               fontWeight: fontWeights.regular,
               fontSize: fontSizes.title,
+              [mediaQuery.smartphone]: { fontSize: fontSizes.smallTitle },
             }}
           >
             {title}
@@ -109,6 +110,7 @@ const IndexPage = ({
               fontWeight: fontWeights.regular,
               fontSize: fontSizes.title,
               marginBottom: 20,
+              [mediaQuery.smartphone]: { fontSize: fontSizes.smallTitle },
             }}
           >
             {tags}
@@ -183,7 +185,10 @@ const IndexPage = ({
             {firstLame.subTitle}
           </h3>
           <p
-            css={{ fontSize: fontSizes.medium }}
+            css={{
+              fontSize: fontSizes.medium,
+              [mediaQuery.smartphone]: { fontSize: fontSizes.mediumLarge },
+            }}
             dangerouslySetInnerHTML={{ __html: firstLame.body }}
           />
           <Link
@@ -263,6 +268,7 @@ const IndexPage = ({
                   fontSize: fontSizes.medium,
                   [mediaQuery.smartphone]: {
                     marginBottom: 30,
+                    fontSize: fontSizes.mediumLarge,
                   },
                 }}
               >
@@ -285,6 +291,7 @@ const IndexPage = ({
                     fontSize: fontSizes.mediumLarge,
                     fontStyle: 'italic',
                     margin: '10px 0 ',
+                    [mediaQuery.smartphone]: { fontSize: fontSizes.large },
                   }}
                 >
                   {title}
@@ -383,6 +390,7 @@ const IndexPage = ({
                   [mediaQuery.smartphone]: {
                     width: 'auto',
                     marginBottom: 30,
+                    fontSize: fontSizes.mediumLarge,
                   },
                 }}
                 href={path}
@@ -409,6 +417,10 @@ const IndexPage = ({
                     fontWeight: fontWeights.semibold,
                     fontSize: fontSizes.mediumLarge,
                     margin: '10px 0',
+                    [mediaQuery.smartphone]: {
+                      fontSize: fontSizes.large,
+                      marginBottom: 0,
+                    },
                   }}
                 >
                   {title}

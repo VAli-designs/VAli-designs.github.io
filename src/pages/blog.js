@@ -10,7 +10,6 @@ import HeaderMenu, {
   HEADER_MOBILE_HEIGHT,
 } from '../components/HeaderMenu';
 import Footer from '../components/Footer';
-import GetInTouch from '../components/GetInTouch';
 import {
   fonts,
   fontSizes,
@@ -19,19 +18,17 @@ import {
   colors,
   mediaQuery,
 } from '../theme';
+import formatDate from '../utils/formatDate';
+import PostHtmlRenderer from '../components/PostHtmlRenderer';
 
-const StudiesPage = ({
+const BlogPage = ({
   data: {
     markdownRemark: {
-      frontmatter: { title, metaDescription, metaTitle, discoverButtonText },
+      frontmatter: { metaDescription, metaTitle, title, readMoreText },
     },
     allMarkdownRemark,
   },
 }) => {
-  const studies = allMarkdownRemark.nodes
-    .map(({ frontmatter }) => frontmatter)
-    .sort((a, b) => a.order - b.order);
-
   return (
     <>
       <PageHead description={metaDescription} title={metaTitle} />
@@ -65,42 +62,62 @@ const StudiesPage = ({
         >
           {title}
         </h1>
-        {studies.map(
+        {allMarkdownRemark.nodes.map(
           ({
-            title,
-            color,
-            mainImage,
-            mainImageTitle,
-            mainImageAlt,
-            id,
-            excerpt,
+            parent: { name },
+            frontmatter: {
+              title,
+              mainImage,
+              mainImageTitle,
+              mainImageAlt,
+              date,
+              author,
+              excerpt,
+            },
           }) => (
             <div
+              key={name}
               css={{
                 display: 'flex',
                 position: 'relative',
                 width: 980,
-                height: 440,
-                marginBottom: 60,
+                height: 340,
+                marginBottom: 120,
                 [mediaQuery.notDesktop]: {
                   width: 'auto',
                   height: 'auto',
-                  flexDirection: 'column-reverse',
-                  marginBottom: 30,
+                  flexDirection: 'column',
+                },
+
+                [mediaQuery.smartphone]: {
+                  marginBottom: 60,
                 },
               }}
             >
+              <Img
+                css={{
+                  width: '40%',
+                  [mediaQuery.notDesktop]: {
+                    width: '100%',
+                    height: 'calc(2*(100vw - 80px) / 3)',
+                    marginBottom: 30,
+                  },
+                }}
+                fluid={mainImage.childImageSharp.fluid}
+                alt={mainImageAlt}
+                title={mainImageTitle}
+              />
               <div
                 css={{
-                  background: color,
-                  color: 'white',
-                  width: '35%',
-                  padding: 30,
+                  width: '60%',
+                  paddingLeft: 30,
+                  paddingRight: 30,
                   fontSize: fontSizes.medium,
                   display: 'flex',
                   flexDirection: 'column',
                   [mediaQuery.notDesktop]: {
                     width: 'auto',
+                    padding: 0,
                   },
                 }}
               >
@@ -109,80 +126,86 @@ const StudiesPage = ({
                     fontFamily: fonts.title,
                     fontWeight: fontWeights.regular,
                     fontSize: fontSizes.larger,
-                    marginBottom: 40,
-                    [mediaQuery.notDesktop]: {
-                      marginBottom: 20,
-                    },
                   }}
                 >
-                  {title}
+                  <Link
+                    to={`/blog/${name}`}
+                    css={{
+                      color: colors.dark,
+                      textDecoration: 'none',
+                      ':hover,:focus,:active': {
+                        textDecoration: 'underline',
+                      },
+                    }}
+                  >
+                    {title}
+                  </Link>
                 </h2>
                 <p
-                  css={{ flex: 1 }}
-                  dangerouslySetInnerHTML={{
-                    __html: excerpt,
+                  css={{
+                    fontSize: fontSizes.normal,
+                    fontStyle: 'italic',
+                    color: colors.darkGrey,
+                    marginBottom: 20,
                   }}
+                >
+                  <span css={{ color: colors.dark, fontStyle: 'normal' }}>
+                    By {author}
+                  </span>
+                  <br />
+                  <span>{formatDate(date)}</span>
+                </p>
+                <PostHtmlRenderer
+                  css={{ flex: 1, fontSize: fontSizes.normal }}
+                  html={excerpt}
                 />
                 <Link
-                  to={`/studies/${id}`}
+                  to={`/blog/${name}`}
                   css={[
                     linkStyle(colors.lightGrey, colors.text),
                     {
                       color: colors.dark,
-                      alignSelf: 'center',
+                      alignSelf: 'flex-start',
                       [mediaQuery.notDesktop]: {
-                        alignSelf: 'flex-start',
                         marginTop: 20,
                       },
                     },
                   ]}
                 >
-                  {discoverButtonText}
+                  {readMoreText}
                 </Link>
               </div>
-              <Img
-                css={{
-                  width: '65%',
-                  [mediaQuery.notDesktop]: {
-                    width: '100%',
-                    height: 'calc(2*(100vw - 80px) / 3)',
-                  },
-                }}
-                fluid={mainImage.childImageSharp.fluid}
-                alt={mainImageAlt}
-                title={mainImageTitle}
-              />
             </div>
           ),
         )}
       </div>
-      <GetInTouch />
       <Footer />
     </>
   );
 };
 
-export default StudiesPage;
+export default BlogPage;
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/pages/studies.md/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/pages/blog.md/" }) {
       frontmatter {
         metaDescription
         metaTitle
         title
-        discoverButtonText
+        readMoreText
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//studies/.*[.]md/" } }
+      filter: { fileAbsolutePath: { regex: "//blog/.*[.]md/" } }
     ) {
       nodes {
+        parent {
+          ... on File {
+            name
+          }
+        }
         frontmatter {
-          id
-          title
-          color
-          order
           mainImage {
             childImageSharp {
               fluid(maxWidth: 1400) {
@@ -192,6 +215,9 @@ export const pageQuery = graphql`
           }
           mainImageTitle
           mainImageAlt
+          title
+          date
+          author
           excerpt
         }
       }

@@ -5,9 +5,19 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
-import HeaderMenu, { HEADER_HEIGHT } from '../components/HeaderMenu';
+import HeaderMenu, {
+  HEADER_HEIGHT,
+  HEADER_MOBILE_HEIGHT,
+} from '../components/HeaderMenu';
 import Footer from '../components/Footer';
-import { fonts, fontSizes, fontWeights, linkStyle, colors } from '../theme';
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  linkStyle,
+  colors,
+  mediaQuery,
+} from '../theme';
 
 const ContactPage = ({
   data: {
@@ -41,6 +51,11 @@ const ContactPage = ({
         marginBottom: 50,
         fontSize: fontSizes.large,
         textAlign: 'center',
+        [mediaQuery.notDesktop]: {
+          marginTop: HEADER_MOBILE_HEIGHT + 30,
+          paddingLeft: 40,
+          paddingRight: 40,
+        },
       }}
     >
       <h1
@@ -61,16 +76,20 @@ const ContactPage = ({
           width: '50vw',
           margin: 40,
           background: colors.lightGrey,
+          [mediaQuery.smartphone]: {
+            margin: 20,
+          },
         }}
       />
       <a
         css={{
           color: colors.dark,
           textDecoration: 'none',
-          fontSize: fontSizes.larger,
+          fontSize: fontSizes.large,
           display: 'block',
           marginBottom: 20,
           ':hover': { textDecoration: 'underline' },
+          whiteSpace: 'nowrap',
         }}
         href={`mailto:${email}`}
       >
@@ -83,6 +102,10 @@ const ContactPage = ({
             top: 7,
             width: 30,
             textAlign: 'center',
+            [mediaQuery.smartphone]: {
+              marginRight: 4,
+              top: 2,
+            },
           }}
           role="img"
         >
@@ -94,9 +117,10 @@ const ContactPage = ({
         css={{
           color: colors.dark,
           textDecoration: 'none',
-          fontSize: fontSizes.larger,
+          fontSize: fontSizes.large,
           display: 'block',
           ':hover': { textDecoration: 'underline' },
+          whiteSpace: 'nowrap',
         }}
         href={`tel:${phone}`}
       >
@@ -108,6 +132,9 @@ const ContactPage = ({
             position: 'relative',
             width: 30,
             textAlign: 'center',
+            [mediaQuery.notDesktop]: {
+              marginRight: 4,
+            },
           }}
           role="img"
         >
@@ -117,7 +144,15 @@ const ContactPage = ({
       </a>
       <a
         href={`mailto:${email}`}
-        css={[linkStyle(colors.green, colors.pink), { marginTop: 50 }]}
+        css={[
+          linkStyle(colors.green, colors.pink),
+          {
+            marginTop: 50,
+            [mediaQuery.smartphone]: {
+              marginTop: 30,
+            },
+          },
+        ]}
       >
         {sendEmailButton}
       </a>

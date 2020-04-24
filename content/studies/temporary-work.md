@@ -12,12 +12,11 @@ color: '#ebc06e'
 mainImage: ./temporary-work.webp
 mainImageTitle: Temporary work UX Research Study
 mainImageAlt: Temporary work UX Research Study
-excerpt:
-  body:
-    UX Research before design study
-    - User interview on site
-    - Need, Pain points research
-    - Job analysis
+excerpt: 
+  UX Research before design study
+  - User interview on site
+  - Need, Pain points research
+  - Job analysis
 steps: 
   - title: Beginning of the study
     image: ./temporary-work-firstStep.webp 

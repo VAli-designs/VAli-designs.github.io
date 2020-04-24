@@ -11,13 +11,12 @@ color: '#ed6b67'
 mainImage: ./florist.webp
 mainImageTitle: UK Florist UX Research Study
 mainImageAlt: UK Florist UX Research Study
-excerpt: 
-  body: >-
-    Digital Showroom Experience Study
-    - Observation/ Shadowing
-    - Interview
-    - User Experience research
-    - Usability Testing
+excerpt: >-
+  Digital Showroom Experience Study
+  - Observation/ Shadowing
+  - Interview
+  - User Experience research
+  - Usability Testing
 steps: 
   - title: Beginning of the study
     image: ./florist-firstStep.webp 

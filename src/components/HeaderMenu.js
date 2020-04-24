@@ -154,7 +154,7 @@ const HeaderMenu = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/resources" activeClassName="active">
+            <Link to="/blog" activeClassName="active">
               Resources
             </Link>
           </li>

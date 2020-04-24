@@ -6,8 +6,7 @@ order: 1
 color: "#3651ad"
 title: Car dealership UX Research Study
 subTitle: 4 days UX Research on site in France
-excerpt:
-  body: Digital Showroom Experience Study - Observation/ Shadowing - Interview -
+excerpt: Digital Showroom Experience Study - Observation/ Shadowing - Interview -
     User Experience research - Usability Testing
 mainImage: ./car-dealer.webp
 mainImageAlt: Car dealership UX Research Study
