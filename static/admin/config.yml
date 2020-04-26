@@ -249,4 +249,4 @@ collections:
       - {label: Image Title, name: mainImageTitle, widget: string}
       - {label: Categories , name: postTags, widget: list}
       - {label: Excerpt, name: excerpt, widget: markdown}
-      - {label: Content , name: body, widget: richtext}
+      - {label: Content , name: body, widget: richtext, media_folder: '/static/images', public_folder: '/images'}
