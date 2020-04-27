@@ -1,0 +1,250 @@
+backend:
+  name: git-gateway
+
+# when using the default proxy server port
+local_backend: true
+
+media_folder: /static/images
+public_folder: /images
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/pages/index.md"
+        fields:
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text}
+          - {label: Title, name: title, widget: string}
+          - {label: tags , name: tags, widget: string}
+          - {label: contactButtonText , name: contactButtonText, widget: string}
+          - label: First Lame
+            name: firstLame
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Title, name: subTitle, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Read More Button Text, name: readMoreButtonText, widget: string}
+              - {label: Read More Button Link, name: readMoreButtonLink, widget: string}
+              - {label: Content, name: body, widget: markdown}
+          - {label: Services Title , name: servicesTitle, widget: string}
+          - label: Services
+            name: services
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: content, widget: list}
+          - {label: Services Button Text , name: servicesButtonText, widget: string}
+          - {label: Studies Title , name: studiesTitle, widget: string}
+          - label: Studies
+            name: studies
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Path, name: path, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: content, widget: text}
+          - {label: Studies Button Text , name: studiesButtonText, widget: string}
+          - {label: Content, name: body, widget: markdown}
+      - label: "Studies Page"
+        name: "studies"
+        file: "content/pages/studies.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text}
+          - {label: DiscoverButtonText , name: discoverButtonText, widget: string}
+      - label: "Services Page"
+        name: "services"
+        file: "content/pages/services.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: SubTitle, name: subTitle, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text}
+          - {label: Content, name: body, widget: markdown}
+          - label: First Lame
+            name: firstLame
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: body, widget: markdown}
+          - label: Cards
+            name: cards
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Other Lames
+            name: otherLames
+            collapsed: false
+            widget: list
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Color, name: color, widget: string}
+              - {label: Image, name: image, widget: image}
+              - {label: Image Alt, name: imageAlt, widget: string}
+              - {label: Image Title, name: imageTitle, widget: string}
+              - {label: Content, name: body, widget: markdown}
+          - label: Process
+            name: processDescr
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Studies For, name: studiesFor, widget: string}
+              - {label: Content, name: body, widget: markdown}
+              - label: Items
+                name: items
+                collapsed: false
+                widget: list
+                fields:
+                  - {label: Label, name: label, widget: string}
+                  - {label: Color, name: color, widget: string}
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/pages/contact.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text}
+          - {label: Email , name: email, widget: string}
+          - {label: Phone , name: phone, widget: string}
+          - {label: Phone Display , name: phoneDisplay, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Image Alt, name: imageAlt, widget: string}
+          - {label: Image Title, name: imageTitle, widget: string}
+          - {label: Send Email Button Text, name: sendEmailButton, widget: string}
+          - {label: Content, name: body, widget: markdown}
+      - label: "Blog Page"
+        name: "blog"
+        file: "content/pages/blog.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text}
+          - {label: ReadMoreText , name: readMoreText, widget: string}
+          # - label: "Top Post"
+          #   name: "topPost"
+          #   widget: "relation"
+          #   collection: "blog"
+          #   searchFields: ["title"]
+          #   valueField: "slug"
+          #   displayFields: ["title"]
+          #   required: false
+      - label: "404 Page"
+        name: "404"
+        file: "content/pages/404.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Meta Title , name: metaTitle, widget: string}
+          - {label: Meta Description , name: metaDescription, widget: text}
+  - label: "Components"
+    name: "components"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - label: "Footer"
+        name: "footer"
+        file: "content/components/footer.md"
+        fields:
+          - {label: Email , name: email, widget: string}
+          - {label: Phone , name: phone, widget: string}
+          - {label: Phone Display , name: phoneDisplay, widget: string}
+          - {label: LinkedIn , name: linkedIn, widget: string}
+          - {label: Twitter , name: twitter, widget: string}
+          - {label: Content , name: body, widget: markdown}
+      - label: "Get In Touch"
+        name: "get-intouch"
+        file: "content/components/get-intouch.md"
+        fields:
+          - {label: Title , name: title, widget: string}
+          - {label: Image , name: bgImage, widget: image}
+          - {label: Image Alt, name: bgImageAlt, widget: string}
+          - {label: Image Title, name: bgImageTitle, widget: string}
+          - {label: Button Text, name: buttonText, widget: string}
+  - label: "Studies"
+    editor:
+      preview: false
+    name: "studies"
+    create: true
+    folder: "content/studies"
+    format: frontmatter
+    media_folder: ''
+    public_folder: ''
+    fields:
+        - {label: Meta Title , name: metaTitle, widget: string}
+        - {label: Meta Description , name: metaDescription, widget: text}
+        - {label: Order , name: order, widget: number}
+        - {label: Color , name: color, widget: string}
+        - {label: Title , name: title, widget: string}
+        - {label: Sub Title , name: subTitle, widget: string}
+        - {label: Content , name: body, widget: markdown}
+        - {label: excerpt, name: excerpt, widget: markdown}
+        - {label: Image , name: mainImage, widget: image}
+        - {label: Image Alt, name: mainImageAlt, widget: string}
+        - {label: Image Title, name: mainImageTitle, widget: string}
+        - {label: Client Needs Title , name: clientNeedsTitle, widget: string}
+        - {label: Client Needs Content , name: clientNeedsContent, widget: text}
+        - label: steps
+          name: steps
+          widget: list
+          collapsed: false
+          fields: 
+            - {label: Title , name: title, widget: string}
+            - {label: Image , name: image, widget: image, required: false}
+            - {label: Image Alt, name: imageAlt, widget: string, required: false}
+            - {label: Image Title, name: imageTitle, widget: string, required: false}
+            - {label: Content , name: body, widget: markdown}
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blog"
+    editor:
+      preview: false
+    create: true
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - {label: Meta Title , name: metaTitle, widget: string}
+      - {label: Meta Description , name: metaDescription, widget: text, pattern: ['.{0,158}', "Must have at less than 158 characters"]}
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime }
+      - {label: Author, name: author, widget: string }
+      - {
+          label: Image , name: mainImage, widget: image,
+          media_folder: '',
+          public_folder: ''
+        }
+      - {label: Image Alt, name: mainImageAlt, widget: string}
+      - {label: Image Title, name: mainImageTitle, widget: string}
+      - {label: Categories , name: postTags, widget: list}
+      - {label: Excerpt, name: excerpt, widget: markdown}
+      - {label: Content , name: body, widget: richtext, media_folder: '/static/images', public_folder: '/images'}
