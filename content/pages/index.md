@@ -11,7 +11,7 @@ firstLame:
   imageAlt: Launching an UX Research study
   imageTitle: Launching an UX Research study
   readMoreButtonText: Read More
-  readMoreButtonLink: https://google.com
+  readMoreButtonLink: /blog/all-about-ux-research
   body: >-
     As UX research is based on solid and realistic user feedbacks, It can help
     you to have a **better understanding** of: 
