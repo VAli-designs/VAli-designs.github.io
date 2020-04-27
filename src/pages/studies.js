@@ -119,7 +119,7 @@ const StudiesPage = ({
                 >
                   {title}
                 </h2>
-                <p
+                <div
                   css={{ flex: 1 }}
                   dangerouslySetInnerHTML={{
                     __html: excerpt,

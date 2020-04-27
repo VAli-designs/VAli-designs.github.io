@@ -79,7 +79,7 @@ const GetInTouch = () => {
         >
           {title}
         </h2>
-        <p
+        <div
           dangerouslySetInnerHTML={{ __html: html }}
           css={{ flex: 1, fontSize: fontSizes.large }}
         />

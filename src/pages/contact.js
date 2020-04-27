@@ -69,7 +69,7 @@ const ContactPage = ({
       >
         {title}
       </h1>
-      <p dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
       <hr
         css={{
           height: 2,

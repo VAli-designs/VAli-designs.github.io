@@ -104,7 +104,7 @@ const StudyPageTemplate = ({
           >
             {subTitle}
           </h2>
-          <p
+          <div
             css={{ flex: 1 }}
             dangerouslySetInnerHTML={{
               __html: html,
@@ -267,7 +267,7 @@ const StudyPageTemplate = ({
             {index + 1}/{steps.length} <br />
             {title}
           </h3>
-          <p css={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: body }} />
+          <div css={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: body }} />
         </div>
         {image && (
           <Img

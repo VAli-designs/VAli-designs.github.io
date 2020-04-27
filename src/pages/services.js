@@ -74,7 +74,7 @@ const ServicePage = ({
       >
         {subTitle}
       </h2>
-      <p
+      <div
         css={{ fontSize: fontSizes.large }}
         dangerouslySetInnerHTML={{ __html: content }}
       />
@@ -174,7 +174,7 @@ const ServicePage = ({
       >
         {processDescr.title}
       </h2>
-      <p
+      <div
         css={{ fontSize: fontSizes.large }}
         dangerouslySetInnerHTML={{ __html: processDescr.body }}
       />
@@ -342,7 +342,7 @@ const Lame = ({ lame }) => (
       >
         {lame.title}
       </h2>
-      <p
+      <div
         css={{ fontSize: fontSizes.medium }}
         dangerouslySetInnerHTML={{ __html: lame.body }}
       />

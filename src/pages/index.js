@@ -115,7 +115,7 @@ const IndexPage = ({
           >
             {tags}
           </h2>
-          <p
+          <div
             css={{ fontSize: fontSizes.mediumLarge }}
             dangerouslySetInnerHTML={{ __html: content }}
           />
@@ -184,7 +184,7 @@ const IndexPage = ({
           >
             {firstLame.subTitle}
           </h3>
-          <p
+          <div
             css={{
               fontSize: fontSizes.medium,
               [mediaQuery.smartphone]: { fontSize: fontSizes.mediumLarge },

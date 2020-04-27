@@ -68,7 +68,7 @@ const Footer = () => {
           >
             About
           </h3>
-          <p
+          <div
             css={{
               fontSize: fontSizes.medium,
               [mediaQuery.smartphone]: { fontSize: fontSizes.mediumLarge },
