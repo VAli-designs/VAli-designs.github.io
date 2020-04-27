@@ -16,6 +16,27 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Forum`,
+            subsets: [`latin`],
+            variants: [`400`, `400i`],
+          },
+          {
+            family: `Playfair Display`,
+            subsets: [`latin`],
+            variants: [`400`, `400i`, `600`, `600i`],
+          },
+          {
+            family: `Source Sans Pro`,
+            variants: [`400`, `400i`, `600`, `600i`, `700`, `700i`],
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
         modulePath: `${__dirname}/src/cms/index.js`,
