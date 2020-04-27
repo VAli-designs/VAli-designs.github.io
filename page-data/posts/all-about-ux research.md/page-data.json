@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-article-js","path":"/posts/all-about-ux research.md/","result":{"errors":[{"message":"Cannot query field \"date\" on type \"MarkdownRemarkFrontmatter\". Did you mean \"path\"?","locations":[{"line":15,"column":7}]}],"pageContext":{"sourcePath":"/Users/fdecampredon/workspaces/site-vanessa/content/blog/all-about-ux research.md"}}}

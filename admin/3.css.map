@@ -1,1 +1,0 @@
-{"version":3,"file":"3.css","sources":["webpack:///./src/cms/editor.css"],"sourcesContent":[".rich-text-editor ul,\n.rich-text-editor ol {\n  padding-left: 30px;\n}\n\n.rich-text-editor { background: red;}"],"mappings":"AAAA;;AAEA;AACA;AACA;AACA;","sourceRoot":""}
