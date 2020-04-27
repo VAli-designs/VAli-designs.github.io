@@ -29,7 +29,7 @@ const StudiesPage = ({
   },
 }) => {
   const studies = allMarkdownRemark.nodes
-    .map(({ frontmatter }) => frontmatter)
+    .map(({ frontmatter, parent }) => ({ ...frontmatter, name: parent.name }))
     .sort((a, b) => a.order - b.order);
 
   return (
@@ -72,10 +72,12 @@ const StudiesPage = ({
             mainImage,
             mainImageTitle,
             mainImageAlt,
-            id,
+            name,
             excerpt,
           }) => (
-            <div
+            <section
+              title={title}
+              key={name}
               css={{
                 display: 'flex',
                 position: 'relative',
@@ -124,7 +126,7 @@ const StudiesPage = ({
                   }}
                 />
                 <Link
-                  to={`/studies/${id}`}
+                  to={`/studies/${name}`}
                   css={[
                     linkStyle(colors.lightGrey, colors.text),
                     {
@@ -152,7 +154,7 @@ const StudiesPage = ({
                 alt={mainImageAlt}
                 title={mainImageTitle}
               />
-            </div>
+            </section>
           ),
         )}
       </div>
@@ -178,8 +180,12 @@ export const pageQuery = graphql`
       filter: { fileAbsolutePath: { regex: "//studies/.*[.]md/" } }
     ) {
       nodes {
+        parent {
+          ... on File {
+            name
+          }
+        }
         frontmatter {
-          id
           title
           color
           order

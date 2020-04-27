@@ -17,6 +17,8 @@ const StudyPageTemplate = ({
   data: {
     markdownRemark: {
       frontmatter: {
+        metaTitle,
+        metaDescription,
         title,
         subTitle,
         color,
@@ -32,7 +34,7 @@ const StudyPageTemplate = ({
   },
 }) => (
   <>
-    <PageHead description={title} title={title} />
+    <PageHead description={metaDescription} title={metaTitle} />
     <GlobalStyles />
     <HeaderMenu />
     <div
@@ -288,6 +290,8 @@ export const pageQuery = graphql`
   query($sourcePath: String!) {
     markdownRemark(fileAbsolutePath: { eq: $sourcePath }) {
       frontmatter {
+        metaTitle
+        metaDescription
         title
         subTitle
         color

@@ -198,11 +198,9 @@ collections:
     create: true
     folder: "content/studies"
     format: frontmatter
-    identifier_field: id
     media_folder: ''
     public_folder: ''
     fields:
-        - {label: Identifier , name: id, widget: string}
         - {label: Meta Title , name: metaTitle, widget: string}
         - {label: Meta Description , name: metaDescription, widget: text}
         - {label: Order , name: order, widget: number}

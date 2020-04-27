@@ -1,5 +1,4 @@
 ---
-id: car-dealer
 metaTitle: All About users - UX Research in France
 metaDescription: All About users - UX Research in France
 order: 1

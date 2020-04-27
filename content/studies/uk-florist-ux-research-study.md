@@ -1,5 +1,4 @@
 ---
-id: florist
 title: UK Florist UX Research Study
 subTitle: User tests in France
 metaTitle: All About users - UX Research in France
