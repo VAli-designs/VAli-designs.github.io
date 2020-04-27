@@ -145,8 +145,8 @@ const ServicePage = ({
         </div>
       ))}
     </section>
-    {otherLames.map((lame) => (
-      <Lame lame={lame} />
+    {otherLames.map((lame, index) => (
+      <Lame lame={lame} key={index} />
     ))}
     <section
       title={processDescr.title}
@@ -203,8 +203,9 @@ const ServicePage = ({
           },
         }}
       >
-        {processDescr.items.map(({ color, label }) => (
+        {processDescr.items.map(({ color, label }, index) => (
           <div
+            key={index}
             css={{
               width: 220,
               height: 260,
