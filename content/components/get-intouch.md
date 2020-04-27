@@ -1,5 +1,5 @@
 --- 
-bgImage: ./get-in-touch.webp
+bgImage: ./get-in-touch.jpg
 bgImageAlt: Get in touch
 bgImageTitle: Get in touch
 title: Get in touch

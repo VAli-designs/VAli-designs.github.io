@@ -5,7 +5,7 @@ metaTitle: All About users - UX Research in France
 metaDescription: All About users - UX Research in France
 firstLame:
   title: A laboratory in Paris
-  image: girl.webp
+  image: girl.jpg
   imageAlt: A laboratory in Paris
   imageTitle: A laboratory in Paris
   body: >-
@@ -26,13 +26,13 @@ firstLame:
     **We have a partnership with a laboratory in Paris for you to assist to the sessions if needed.**
 cards:
   - title: Recorded User test sessions
-    image: ./laboratory.webp
+    image: ./laboratory.jpg
     imageAlt: Recorded User test sessions
     imageTitle: Recorded User test sessions
     content: We deliver the videos of the sessions recorded on the screen with the
       user's face and reactions.
   - title: Recorded Room Sessions
-    image: ./room.webp
+    image: ./room.jpg
     imageAlt: Recorded User test sessions
     imageTitle: Recorded User test sessions
     content: We can also provide the recorded video of the sessions in the room.
@@ -41,7 +41,7 @@ otherLames:
     imageAlt: Recruitment Capabilities
     imageTitle: Recruitment Capabilities
     color: rgb(253, 239, 163)
-    image: recruitment.webp
+    image: recruitment.jpg
     body: >-
       
       We have a partnership with a recruitment agency in France. 

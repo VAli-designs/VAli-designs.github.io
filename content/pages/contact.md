@@ -5,7 +5,7 @@ metaDescription: All About users -  Get in touch
 email: contact@allaboutusers.com
 phone: "+330756997541"
 phoneDisplay: +33 07 56 99 75 41
-image: ./contact.webp
+image: ./contact.jpg
 imageAlt: Get in Touch
 imageTitle: Get in Touch
 sendEmailButton: Send us an email
