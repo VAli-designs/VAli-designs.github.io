@@ -7,7 +7,7 @@ clientNeedsTitle: "THE CLIENT'S NEED / VERBATIM"
 clientNeedsContent: '"We would like to assess the strenghts/Blockages of our site in terms of UX (but also more generally in terms of product feeling, checkout flow..."'
 order: 0
 color: '#ed6b67'
-mainImage: ./florist.webp
+mainImage: ./florist.jpg
 mainImageTitle: UK Florist UX Research Study
 mainImageAlt: UK Florist UX Research Study
 excerpt: >-
@@ -18,7 +18,7 @@ excerpt: >-
   - Usability Testing
 steps: 
   - title: Beginning of the study
-    image: ./florist-firstStep.webp 
+    image: ./florist-firstStep.jpg 
     imageAlt: Beginning of the study
     imageTitle: Beginning of the study
     body: >-
@@ -29,7 +29,7 @@ steps:
       - the next steps in the brand development
       - the previous UX research studies that had been done
   - title: User test preparation 
-    image: ./florist-secondStep.webp 
+    image: ./florist-secondStep.jpg 
     imageAlt: User test preparation 
     imageTitle: User test preparation 
     body: >-
@@ -39,7 +39,7 @@ steps:
       - we started the recruitment of the targeted audience
       - we booked a laboratory in Paris as 2 of the team members will assist at the sessions
   - title: User test sessions
-    image: ./florist-thirdStep.webp 
+    image: ./florist-thirdStep.jpg 
     imageAlt: User test sessions
     imageTitle: User test sessions 
     body: >-

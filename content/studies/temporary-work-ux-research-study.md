@@ -9,7 +9,7 @@ clientNeedsContent: '"Collecting information from UX research to design a mobile
 order: 2
 path: 'temporary-work'
 color: '#ebc06e'
-mainImage: ./temporary-work.webp
+mainImage: ./temporary-work.jpg
 mainImageTitle: Temporary work UX Research Study
 mainImageAlt: Temporary work UX Research Study
 excerpt: 
@@ -19,7 +19,7 @@ excerpt:
   - Job analysis
 steps: 
   - title: Beginning of the study
-    image: ./temporary-work-firstStep.webp 
+    image: ./temporary-work-firstStep.jpg 
     imageAlt: Beginning of the study
     imageTitle: Beginning of the study
     body: >-
@@ -28,7 +28,7 @@ steps:
       - the main questions about the design of the app, the assumptions
       - The motivation to launch this study
   - title: The sessions 
-    image: ./temporary-work-secondStep.webp 
+    image: ./temporary-work-secondStep.jpg 
     imageAlt: The sessions 
     imageTitle: The sessions 
     body: >-

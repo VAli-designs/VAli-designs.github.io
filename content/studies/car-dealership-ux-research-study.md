@@ -7,7 +7,7 @@ title: Car dealership UX Research Study
 subTitle: 4 days UX Research on site in France
 excerpt: Digital Showroom Experience Study - Observation/ Shadowing - Interview -
     User Experience research - Usability Testing
-mainImage: ./car-dealer.webp
+mainImage: ./car-dealer.jpg
 mainImageAlt: Car dealership UX Research Study
 mainImageTitle: Car dealership UX Research Study
 clientNeedsTitle: THE CLIENT'S NEED
@@ -16,14 +16,14 @@ clientNeedsContent: '"Create a new retail experience for our customers that
   online and in dealership"'
 steps:
   - title: Beginning of the study
-    image: ./car-firstStep.webp
+    image: ./car-firstStep.jpg
     imageAlt: Beginning of the study
     imageTitle: Beginning of the study
     body: "We mainly discussed about:  - the next steps in the brand development -
       the previous User Experience Studies - The reasons for launching this
       study"
   - title: UX Research Preparation
-    image: ./car-secondStep.webp
+    image: ./car-secondStep.jpg
     imageAlt: UX Research Preparation
     imageTitle: UX Research Preparation
     body: >-
@@ -33,7 +33,7 @@ steps:
        - we started the recruitment of the targeted audience
        - dealer's staff interview
   - title: The Sessions
-    image: ./thirdStep.webp
+    image: ./thirdStep.jpg
     imageAlt: The Sessions
     imageTitle: The Sessions
     body: "A Senior UX Researcher observed and interviewed around 15 people in the
