@@ -1,42 +1,61 @@
 ---
-title: Services
-subTitle: "We provide different facilities depending on your needs "
-metaTitle: All About users - UX Research in France
-metaDescription: All About users - UX Research in France
+title: User Research Services
+subTitle: "We provide different User Research Services depending on your needs "
+metaTitle: User Research Services - ux in France
+metaDescription: "We provide User Research Services in France for you to grow your business. "
 firstLame:
-  title: A laboratory in Paris
-  image: girl.jpg
-  imageAlt: A laboratory in Paris
-  imageTitle: A laboratory in Paris
+  title: "User Testing Facilities: A laboratory in Paris"
+  image: observation-room-user-testing-france.jpg
+  imageAlt: user-testing-france-observation-room
+  imageTitle: user-testing-france-observation-room
   body: >-
+    ###### If needed, we can plan a physical User Testing Session in a
+    laboratory in Paris.
+
+
+    ###### You can also decide to plan a Remote User Testing Session.
+
+
     ### Observation room
 
 
-    You can decide to assist to the test behind a glass mirror
+    You can assist to the study behind a glass mirror. 
 
 
+    You will be able to watch the full session: 
+
+
+    * the participant's face and reactions
+
+    * the user's screen and mouse click via a remote screen display
 
 
     ### Test room
 
 
-    Here is where the magic comes with the user and the UX Researcher 
+    Following your needs, the sessions are moderated. 
 
 
-    **We have a partnership with a laboratory in Paris for you to assist to the sessions if needed.**
+    The sessions are recorded (audio + video + webcam + Mouse click) even on mobile devices.
 cards:
-  - title: Recorded User test sessions
-    image: ./laboratory.jpg
-    imageAlt: Recorded User test sessions
-    imageTitle: Recorded User test sessions
+  - title: Recorded User Testing sessions
+    image: user-testing-france-mobile-screen.png
+    imageAlt: user-testing-france-mobile-screen
+    imageTitle: user-testing-france-mobile-screen
     content: We deliver the videos of the sessions recorded on the screen with the
       user's face and reactions.
   - title: Recorded Room Sessions
-    image: ./room.jpg
-    imageAlt: Recorded User test sessions
-    imageTitle: Recorded User test sessions
-    content: We can also provide the recorded video of the sessions in the room.
+    image: user-research-france-uk-florist-two.jpg
+    imageAlt: user-testing-france-ukflorist-02
+    imageTitle: user-testing-france-ukflorist-02
+    content: "We can also provide the room recording video. "
 otherLames:
+  - title: Remote User Testing sessions
+    color: rgb(159, 204, 213)
+    image: car-dealer.jpg
+    imageAlt: Remote User Testing sessions
+    imageTitle: Remote User Testing sessions
+    body: Remote User Testing sessions
   - title: Recruitment Capabilities
     imageAlt: Recruitment Capabilities
     imageTitle: Recruitment Capabilities
@@ -85,16 +104,12 @@ processDescr:
     - label: Marketers
       color: rgb(137, 200, 170)
 ---
-Usability Studies
+User Testing (Usability Test, Design validation, Card Sorting...)
 
-UX Studies  (Interviews, Focus group)
+User Interviews, Focus group
 
-UX Benchmark Studies
+UX Benchmark 
 
-Prototype, MVP, Product studies
-
-Design validation
-
-Card Sorting
+UX Design: wireframing, prototype, MVP
 
  ...
