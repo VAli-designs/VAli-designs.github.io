@@ -1,8 +1,10 @@
 ---
-metaTitle: All About users - UX Research in France
-metaDescription: All About users - UX Research in France
-title: UX Research in France
-tags: "#Phygital #UserTesting #Mobile #Shadowing #Interviews  #UserExperience"
+metaTitle: All About users - User Testing, User Research, UX Research Agency in France
+metaDescription: We conduct **User Testing**, **User Research in France**
+  (Interviews, User Test...), recruit **French Users**, moderate the sessions,
+  bring you insights. Contact us here ☎ +33 07 56 99 75 41
+title: User Testing in France
+tags: "#Phygital #UserTesting #Mobile #Shadowing #Interviews  #UserExperience "
 contactButtonText: Let's talk
 firstLame:
   title: Launching an UX Research study
@@ -25,62 +27,70 @@ firstLame:
 
 
     We have a **full article** based on our experience and our customer's feedbacks.
-servicesTitle: We do researchs on your whole environment
+servicesTitle: We provide a set of solutions in User Research for you to grow
+  your market in France
 services:
-  - title: Qualitative Research
+  - title: Qualitative UX Research
     image: ./qualitative-research.jpg
-    imageAlt: Qualitative research
-    imageTitle: Qualitative research
+    imageAlt: Qualitative UX Research in User Research
+    imageTitle: Qualitative UX Research
     content:
       - User Test
       - Focus group
       - Interview
-      - Observation/Shadowing
-  - title: Quantitative research
+      - Observation
+      - Shadowing
+  - title: Quantitative UX Research
     image: ./quantitative-research.jpg
-    imageAlt: Quantitative research
-    imageTitle: Quantitative research
+    imageAlt: Quantitative UX Research in User Research
+    imageTitle: Quantitative UX Research
     content:
-      - User test
-      - Hotjar/ Data analysis
+      - User Test
+      - Hotjar and Website Data Analysis
       - UX Benchmark
       - Online Surveys
-  - title: "UX exploration of:"
+  - title: "Devices UX Exploration "
     image: ./ux-exploration.jpg
-    imageAlt: UX exploration
-    imageTitle: UX exploration
+    imageAlt: Devices UX Exploration in User Research
+    imageTitle: "Devices UX Exploration "
     content:
-      - Mobile, Website
-      - "Applications, e-shop "
-      - Stores, Product
+      - "All Devices : Mobile"
+      - Website
+      - Applications
+      - e-shop
+      - Stores
+      - Product
       - Packaging
 servicesButtonText: See our services
 studiesTitle: A sneak peek in our work
 studies:
-  - title: Online Florist UX Research Study
-    path: /sudies/florist
-    image: ./florist.jpg
-    imageAlt: Online Florist UX Research Study
-    imageTitle: Online Florist UX Research Study
-    content: "User tests : Branding, Product, Packaging, websiteeshop performance"
-  - title: Car  dealership UX Research Study
-    path: /sudies/car-dealer
+  - title: UK Online Florist User Research Study
+    path: /ux-studies/florist
+    image: ./uk_florist_user_research_allaboutusers_main_image.jpg
+    imageAlt: Online Florist User Research Study in France
+    imageTitle: Online Florist User Research Study in France
+    content: |-
+      Online Conversion Rate improvement
+      User Test : E-shop, Product and Packaging performance
+  - title: German Car Dealership User Research Study
+    path: /ux-studies/car-dealer
     image: ./car-dealer.jpg
-    imageAlt: Online Florist UX Research Study
-    imageTitle: Online Florist UX Research Study
-    content: "Observation, Shadowing, Interview : Digital Showroom experience
-      performance"
-  - title: Temporary work agency UX Research Study
-    path: /sudies/temporary-work
+    imageAlt: German Car Dealership User Research Study in France
+    imageTitle: German Car Dealership User Research Study in France
+    content: |-
+      Upsell and Visitor Conversion rate improvement 
+      Digital Showroom Experience: User Interviews, Observation, User Test
+  - title: Temporary work agency User Research Study
+    path: /ux-studies/temporary-work
     image: ./temporary-work.jpg
-    imageAlt: UX Research Study
-    imageTitle: UX Research Study
-    content: User interview on site, Job, needs Analysis
+    imageAlt: Temporary work agency User Research Study in France
+    imageTitle: Temporary work agency User Research Study in France
+    content: |-
+      Build User knowledge before mobile app design
+      User Interview, User journey mapping
 studiesButtonText: Explore UX Studies
 ---
-Are you a UX Researcher, Designer, Product Manager, Marketer?\
-Need insights or to conduct **UX Research studies** in **France** ?
+Are you a UX Researcher, a Designer, a Product Manager, a Marketer?
 
-We conduct **UX Research in France** (interviews, tests...), recruit customers/users,\
-moderate the sessions, **bring insights for you to take strategic decisions** based\
-on your **user's feedback**.
+We conduct **User Testing, UX and User Research in France** (Interviews, User Test...), recruit French Users, moderate the sessions and **bring insights for you to take strategic decisions** based\
+on your **Users's feedback**.
