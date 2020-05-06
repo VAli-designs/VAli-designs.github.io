@@ -99,6 +99,7 @@ const IndexPage = ({
               fontFamily: fonts.title,
               fontWeight: fontWeights.regular,
               fontSize: fontSizes.title,
+              marginBottom: 10,
               [mediaQuery.smartphone]: { fontSize: fontSizes.smallTitle },
             }}
           >
@@ -228,6 +229,9 @@ const IndexPage = ({
             marginTop: 40,
             paddingBottom: 80,
             position: 'relative',
+            textAlign: 'center',
+            maxWidth: 800,
+            alignSelf: 'center',
             ':after': {
               content: '" "',
               position: 'absolute',
@@ -236,9 +240,6 @@ const IndexPage = ({
               height: 2,
               background: colors.dark,
               left: 'calc(50% - 15px)',
-            },
-            [mediaQuery.smartphone]: {
-              textAlign: 'center',
             },
           }}
         >
@@ -272,7 +273,7 @@ const IndexPage = ({
                   },
                 }}
               >
-                <Img
+                {image && <Img
                   css={{
                     borderRadius: '100%',
                     width: 160,
@@ -283,7 +284,7 @@ const IndexPage = ({
                   fluid={image.childImageSharp.fluid}
                   title={imageTitle}
                   alt={imageAlt}
-                />
+                />}
                 <h3
                   css={{
                     fontFamily: fonts.title,

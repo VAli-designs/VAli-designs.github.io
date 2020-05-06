@@ -3,14 +3,14 @@ metaTitle: All About users - User Testing, User Research, UX Research Agency in 
 metaDescription: We conduct **User Testing**, **User Research in France**
   (Interviews, User Test...), recruit **French Users**, moderate the sessions,
   bring you insights. Contact us here ☎ +33 07 56 99 75 41
-title: User Testing, User Research in France
+title: "User Testing, User Research in France "
 tags: "#Website, #Mobile, #App, #Interviews, #TestFacilities, #Phygital,
   #Shadowing, #UserExperience"
 contactButtonText: Let's talk
 firstLame:
   title: Launching a User Research study
   subTitle: What are the benefits ?
-  image: ./girl.jpg
+  image: girl-user-research.jpg
   imageAlt: Launching an User Research study in France - allaboutusers.fr
   imageTitle: Launching an User Research study in France - allaboutusers.fr
   readMoreButtonText: Read More
@@ -27,14 +27,16 @@ firstLame:
     * your **competitor** UX strategy
 
 
-    We have a **full article** based on our experience and our customer's feedbacks.
+    <br/>
+
+    We have a <strong>full article</strong> based on our experience and our customer's feedbacks.
 servicesTitle: We provide a set of solutions in User Research for you to grow
   your market in France
 services:
   - title: Qualitative User Research
-    image: ukflorist.jpg
-    imageAlt: Qualitative User Research in France - allaboutusers.fr
-    imageTitle: Qualitative User Research in France - allaboutusers.fr
+    image: ./qualitative-user-research.jpg
+    imageAlt: "Qualitative User Research in France "
+    imageTitle: "Qualitative User Research in France "
     content:
       - User Test
       - Focus group
@@ -42,27 +44,25 @@ services:
       - Observation
       - Shadowing
   - title: Quantitative User Research
-    image: ./quantitative-research.jpg
-    imageAlt: Quantitative User Research - allaboutusers.fr
-    imageTitle: Quantitative User Research - allaboutusers.fr
+    image: ./quantitative-user-research.jpg
+    imageAlt: "Quantitative User Research "
+    imageTitle: "Quantitative User Research "
     content:
       - User Test
       - Hotjar and Website Data Analysis
       - UX Benchmark
       - Online Surveys
   - title: "User Touchpoint Exploration "
-    image: ./ux-exploration.jpg
-    imageAlt: User Touchpoint Exploration - allaboutusers.fr
-    imageTitle: User Touchpoint Exploration - allaboutusers.fr
+    image: ./user-touchpoint-exploration.jpg
+    imageAlt: "User Touchpoint Exploration "
+    imageTitle: "User Touchpoint Exploration "
     content:
-      - Mobile
-      - Website
+      - Mobile / Website
       - Applications
       - e-shop
       - Stores
-      - Product
-      - Packaging
-servicesButtonText: See our User Research Services
+      - Product / Packaging
+servicesButtonText: See our Services
 studiesTitle: A sneak peek in our work
 studies:
   - title: UK Online Florist User Research Study
@@ -92,5 +92,5 @@ studies:
 studiesButtonText: Explore UX Studies
 ---
 Are you a UX Researcher, a Designer, a Product Manager, a Marketer?    
-
+<br />
 We conduct **User Testing, UX and User Research in France** (Interviews, User Test...), recruit French users, moderate the sessions and **bring insights for you to take strategic decisions** based on your **users's feedback**.

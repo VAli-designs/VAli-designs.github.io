@@ -1,7 +1,7 @@
 ---
 title: User Research Services
 subTitle: "We provide different User Research Services depending on your needs "
-metaTitle: User Research Services - ux in France
+metaTitle: User Research Services - UX in France
 metaDescription: "We provide User Research Services in France for you to grow your business. "
 firstLame:
   title: "User Testing Facilities: A laboratory in Paris"
@@ -9,11 +9,8 @@ firstLame:
   imageAlt: user-testing-france-observation-room
   imageTitle: user-testing-france-observation-room
   body: >-
-    ###### If needed, we can plan a physical User Testing Session in a
-    laboratory in Paris.
-
-
-    ###### You can also decide to plan a Remote User Testing Session.
+    You can choose the sessions to take place at a laboratory in Paris or a
+    Remote User Testing Session.
 
 
     ### Observation room
@@ -33,17 +30,17 @@ firstLame:
     ### Test room
 
 
-    Following your needs, the sessions are moderated. 
+    Following your needs, the sessions are moderated by a UX Expert. 
 
 
     The sessions are recorded (audio + video + webcam + Mouse click) even on mobile devices.
 cards:
   - title: Recorded User Testing sessions
     image: user-testing-france-mobile-screen.png
-    imageAlt: user-testing-france-mobile-screen
-    imageTitle: user-testing-france-mobile-screen
-    content: We deliver the videos of the sessions recorded on the screen with the
-      user's face and reactions.
+    imageAlt: mobile-screen-user-testing-france
+    imageTitle: mobile-screen-user-testing-france
+    content: We will deliver the videos of each session with the user's face and
+      reactions.
   - title: Recorded Room Sessions
     image: user-research-france-uk-florist-two.jpg
     imageAlt: user-testing-france-ukflorist-02
