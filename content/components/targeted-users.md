@@ -1,0 +1,12 @@
+--- 
+title: "We Provide solutions/studies for"
+items:
+  - label: Product Managers
+    color: rgb(235, 192, 110)
+  - label: Researchers
+    color: rgb(237, 107, 103)
+  - label: Designers
+    color: rgb(88, 111, 178)
+  - label: Marketers
+    color: rgb(137, 200, 170)
+--- 

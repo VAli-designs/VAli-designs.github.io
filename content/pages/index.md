@@ -1,8 +1,8 @@
 ---
-metaTitle: All About users - User Testing, User Research, UX Research Agency in France
-metaDescription: We conduct **User Testing**, **User Research in France**
-  (Interviews, User Test...), recruit **French Users**, moderate the sessions,
-  bring you insights. Contact us here ☎ +33 07 56 99 75 41
+metaTitle: All About Users - User Testing/Research in France
+metaDescription: We conduct User Testing, User Research in France
+  (Interviews, User Test...), recruit French Users, bring you insights.
+  ☎ +33 07 56 99 75 41
 title: "User Testing, User Research in France "
 tags: "#Website, #Mobile, #App, #Interviews, #TestFacilities, #Phygital,
   #Shadowing, #UserExperience"
@@ -14,7 +14,7 @@ firstLame:
   imageAlt: Launching an User Research study in France - allaboutusers.fr
   imageTitle: Launching an User Research study in France - allaboutusers.fr
   readMoreButtonText: Read More
-  readMoreButtonLink: /blog/all-about-user-research
+  readMoreButtonLink: /resources/all-about-user-research
   body: >-
     As User Research is based on solid and realistic user feedbacks, It can help
     you to have a **better understanding** of: 
@@ -30,7 +30,7 @@ firstLame:
     <br/>
 
     We have a <strong>full article</strong> based on our experience and our customer's feedbacks.
-servicesTitle: We provide a set of solutions in User Research for you to grow
+servicesTitle: User Research can help you grow
   your market in France
 services:
   - title: Qualitative User Research
@@ -66,31 +66,31 @@ servicesButtonText: See our Services
 studiesTitle: A sneak peek in our work
 studies:
   - title: UK Online Florist User Research Study
-    path: /ux-studies/florist
-    image: ./uk_florist_user_research_allaboutusers_main_image.jpg
-    imageAlt: Online Florist User Research Study in France
-    imageTitle: Online Florist User Research Study in France
+    path: /ux-studies/uk-florist-ux-research-study
+    image: ./woman-user-testing-france.jpg
+    imageAlt: Woman user testing in France
+    imageTitle: Woman user testing in France
     content: |-
-      Online Conversion Rate improvement
+      Online Conversion Rate improvement <br />
       User Test : E-shop, Product and Packaging performance
   - title: German Car Dealership User Research Study
-    path: /ux-studies/car-dealer
-    image: ./car-dealer.jpg
-    imageAlt: German Car Dealership User Research Study in France
+    path: /ux-studies/car-dealership-ux-research-study
+    image: "./car-user-testing-france.jpg"
+    imageAlt: Car user testing in France
     imageTitle: German Car Dealership User Research Study in France
     content: |-
-      Upsell and Visitor Conversion rate improvement 
+      Upsell and Visitor Conversion rate improvement <br />
       Digital Showroom Experience: User Interviews, Observation, User Test
   - title: Temporary work agency User Research Study
-    path: /ux-studies/temporary-work
-    image: ./temporary-work.jpg
-    imageAlt: Temporary work agency User Research Study in France
-    imageTitle: Temporary work agency User Research Study in France
+    path: /ux-studies/temporary-work-ux-research-study
+    image: ./temporary-work-user-testing-france.jpg
+    imageAlt: Temporary work user testing france
+    imageTitle: Temporary work user testing france
     content: |-
-      Build User knowledge before mobile app design
+      Build User knowledge before mobile app design <br />
       User Interview, User journey mapping
 studiesButtonText: Explore UX Studies
 ---
 Are you a UX Researcher, a Designer, a Product Manager, a Marketer?    
 <br />
-We conduct **User Testing, UX and User Research in France** (Interviews, User Test...), recruit French users, moderate the sessions and **bring insights for you to take strategic decisions** based on your **users's feedback**.
+We conduct **User Testing** and **User Research** in **France** (Interviews, User Test...), recruit French users, moderate the sessions and **bring insights for you to take strategic decisions** based on your **users's feedback**.

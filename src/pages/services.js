@@ -12,6 +12,7 @@ import HeaderMenu, {
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
 import { mediaQuery, colors, fonts, fontSizes, fontWeights } from '../theme';
+import TargetedUsers from '../components/TargetedUsers';
 
 const ServicePage = ({
   data: {
@@ -85,8 +86,8 @@ const ServicePage = ({
         display: 'flex',
         width: '100%',
         justifyContent: 'center',
-        marginTop: 80,
-        marginBottom: 80,
+        marginTop: 120,
+        marginBottom: 120,
         [mediaQuery.notDesktop]: {
           flexDirection: 'column',
           alignItems: 'center',
@@ -146,12 +147,22 @@ const ServicePage = ({
       ))}
     </section>
     {otherLames.map((lame, index) => (
-      <Lame lame={lame} key={index} />
+      <Lame
+        lame={lame}
+        key={index}
+        inverted={index % 2 === 1}
+        css={{
+          marginBottom: 120,
+          [mediaQuery.notDesktop]: {
+            marginBottom: 30,
+          },
+        }}
+      />
     ))}
     <section
       title={processDescr.title}
       css={{
-        padding: '80px 0',
+        padding: '0 0 120px',
         width: 900,
         margin: 'auto',
         [mediaQuery.notDesktop]: {
@@ -178,55 +189,7 @@ const ServicePage = ({
         css={{ fontSize: fontSizes.large }}
         dangerouslySetInnerHTML={{ __html: processDescr.body }}
       />
-      <h3
-        css={{
-          fontFamily: fonts.title,
-          fontWeight: fontWeights.semibold,
-          fontSize: fontSizes.larger,
-          marginTop: 40,
-          marginBottom: 40,
-          [mediaQuery.notDesktop]: {
-            marginTop: 20,
-            marginBottom: 20,
-          },
-        }}
-      >
-        {processDescr.studiesFor}
-      </h3>
-      <div
-        css={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          [mediaQuery.notDesktop]: {
-            flexDirection: 'column',
-            alignItems: 'center',
-          },
-        }}
-      >
-        {processDescr.items.map(({ color, label }, index) => (
-          <div
-            key={index}
-            css={{
-              width: 220,
-              height: 260,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlign: 'center',
-              fontSize: '3.0rem',
-              background: color,
-              color: 'white',
-              [mediaQuery.notDesktop]: {
-                width: 'calc(100vw - 80px)',
-                height: 'calc((100vw - 80px) / 3)',
-                marginBottom: 5,
-              },
-            }}
-          >
-            {label}
-          </div>
-        ))}
-      </div>
+      <TargetedUsers />
     </section>
     <GetInTouch />
     <Footer />
@@ -286,11 +249,6 @@ export const pageQuery = graphql`
         }
         processDescr {
           title
-          studiesFor
-          items {
-            label
-            color
-          }
           body
         }
       }
@@ -298,10 +256,15 @@ export const pageQuery = graphql`
   }
 `;
 
-const Lame = ({ lame }) => (
+const Lame = ({ lame, inverted, ...props }) => (
   <section
     title={lame.title}
-    css={{ display: 'flex', maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)` }}
+    css={{
+      display: 'flex',
+      maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
+      flexDirection: inverted ? 'row-reverse' : 'row',
+    }}
+    {...props}
   >
     <Img
       css={{

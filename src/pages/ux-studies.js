@@ -126,9 +126,9 @@ const StudiesPage = ({
                   }}
                 />
                 <Link
-                  to={`/studies/${name}`}
+                  to={`/ux-studies/${name}`}
                   css={[
-                    linkStyle(colors.lightGrey, colors.text),
+                    linkStyle('white', colors.cyan),
                     {
                       color: colors.dark,
                       alignSelf: 'center',

@@ -17,6 +17,7 @@ import {
   linkStyle,
   colors,
   mediaQuery,
+  boxShadow,
 } from '../theme';
 import formatDate from '../utils/formatDate';
 import PostHtmlRenderer from '../components/PostHtmlRenderer';
@@ -80,9 +81,11 @@ const BlogPage = ({
               css={{
                 display: 'flex',
                 position: 'relative',
-                width: 980,
-                height: 340,
-                marginBottom: 120,
+                width: 1020,
+                height: 420,
+                marginBottom: 40,
+                padding: 40,
+                boxShadow,
                 [mediaQuery.notDesktop]: {
                   width: 'auto',
                   height: 'auto',
@@ -129,7 +132,7 @@ const BlogPage = ({
                   }}
                 >
                   <Link
-                    to={`/blog/${name}`}
+                    to={`/resources/${name}`}
                     css={{
                       color: colors.dark,
                       textDecoration: 'none',
@@ -162,9 +165,8 @@ const BlogPage = ({
                 <Link
                   to={`/blog/${name}`}
                   css={[
-                    linkStyle(colors.lightGrey, colors.text),
+                    linkStyle(colors.orange, colors.pink),
                     {
-                      color: colors.dark,
                       alignSelf: 'flex-start',
                       [mediaQuery.notDesktop]: {
                         marginTop: 20,

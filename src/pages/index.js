@@ -18,6 +18,7 @@ import {
   fontWeights,
   linkStyle,
 } from '../theme';
+import TargetedUsers from '../components/TargetedUsers';
 
 const IndexPage = ({
   data: {
@@ -200,6 +201,18 @@ const IndexPage = ({
           </Link>
         </div>
       </section>
+      <TargetedUsers
+        css={{
+          padding: '80px 0',
+          width: 900,
+          margin: 'auto',
+          [mediaQuery.notDesktop]: {
+            padding: '30px  40px',
+            width: 'auto',
+            margin: 0,
+          },
+        }}
+      />
       <section
         title={servicesTitle}
         css={{
@@ -226,12 +239,11 @@ const IndexPage = ({
             fontWeight: fontWeights.regular,
             fontSize: fontSizes.smallTitle,
             alignSelf: 'center',
-            marginTop: 40,
-            paddingBottom: 80,
             position: 'relative',
             textAlign: 'center',
             maxWidth: 800,
-            alignSelf: 'center',
+            marginTop: 40,
+            paddingBottom: 80,
             ':after': {
               content: '" "',
               position: 'absolute',
@@ -273,18 +285,20 @@ const IndexPage = ({
                   },
                 }}
               >
-                {image && <Img
-                  css={{
-                    borderRadius: '100%',
-                    width: 160,
-                    height: 160,
-                    display: 'inline-block',
-                  }}
-                  imgStyle={{ objectPosition: 'top center' }}
-                  fluid={image.childImageSharp.fluid}
-                  title={imageTitle}
-                  alt={imageAlt}
-                />}
+                {image && (
+                  <Img
+                    css={{
+                      borderRadius: '100%',
+                      width: 160,
+                      height: 160,
+                      display: 'inline-block',
+                    }}
+                    imgStyle={{ objectPosition: 'top center' }}
+                    fluid={image.childImageSharp.fluid}
+                    title={imageTitle}
+                    alt={imageAlt}
+                  />
+                )}
                 <h3
                   css={{
                     fontFamily: fonts.title,
@@ -342,8 +356,19 @@ const IndexPage = ({
             fontWeight: fontWeights.regular,
             fontSize: fontSizes.smallTitle,
             alignSelf: 'center',
-            marginBottom: 40,
             position: 'relative',
+            textAlign: 'center',
+            maxWidth: 800,
+            paddingBottom: 80,
+            ':after': {
+              content: '" "',
+              position: 'absolute',
+              bottom: 40,
+              width: 30,
+              height: 2,
+              background: colors.dark,
+              left: 'calc(50% - 15px)',
+            },
           }}
         >
           {studiesTitle}
@@ -426,7 +451,7 @@ const IndexPage = ({
                 >
                   {title}
                 </h3>
-                {content}
+                <div dangerouslySetInnerHTML={{ __html: content }} />
               </a>
             ),
           )}

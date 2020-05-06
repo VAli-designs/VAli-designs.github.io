@@ -1,6 +1,7 @@
 ---
-title: UX Research in France
-metaTitle: UX Research in France
-metaDescription: UX Research in France
+title: Resources
+metaTitle: Resources - UX in France
+metaDescription: >-
+  We like talking about User Research. Here are some useful UX resources.
 readMoreText: Read More
 ---

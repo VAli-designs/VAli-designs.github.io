@@ -30,14 +30,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   studies.forEach((node) => {
     createPage({
-      path: `/studies/${node.name}/`,
+      path: `/ux-studies/${node.name}/`,
       component: path.resolve(`./src/templates/studies.js`),
       context: { sourcePath: node.absolutePath },
     });
   });
   posts.forEach((node) => {
     createPage({
-      path: `/blog/${node.name}/`,
+      path: `/resources/${node.name}/`,
       component: path.resolve(`./src/templates/article.js`),
       context: { sourcePath: node.absolutePath },
     });

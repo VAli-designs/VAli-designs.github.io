@@ -144,7 +144,7 @@ const HeaderMenu = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/studies" activeClassName="active">
+            <Link to="/ux-studies" activeClassName="active">
               UX Studies
             </Link>
           </li>
@@ -154,7 +154,7 @@ const HeaderMenu = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/blog" activeClassName="active">
+            <Link to="/resources" activeClassName="active">
               Resources
             </Link>
           </li>

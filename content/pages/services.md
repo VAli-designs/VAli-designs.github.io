@@ -1,25 +1,25 @@
 ---
+metaTitle: User Research Services - UX in France
+metaDescription: We provide User Research Services in France for you to grow your business. 
 title: User Research Services
 subTitle: "We provide different User Research Services depending on your needs "
-metaTitle: User Research Services - UX in France
-metaDescription: "We provide User Research Services in France for you to grow your business. "
 firstLame:
   title: "User Testing Facilities: A laboratory in Paris"
   image: observation-room-user-testing-france.jpg
-  imageAlt: user-testing-france-observation-room
-  imageTitle: user-testing-france-observation-room
+  imageAlt: observation room user testing france
+  imageTitle: observation room user testing france
   body: >-
-    You can choose the sessions to take place at a laboratory in Paris or a
-    Remote User Testing Session.
-
+    The sessions can take place at a laboratory in Paris or  can be
+    remote User Testing sessions.
+    <br/>
+    <br/>
 
     ### Observation room
 
+    You can assist to the study **behind a glass mirror**. 
 
-    You can assist to the study behind a glass mirror. 
 
-
-    You will be able to watch the full session: 
+    You will be able to **watch the full session**: 
 
 
     * the participant's face and reactions
@@ -27,49 +27,56 @@ firstLame:
     * the user's screen and mouse click via a remote screen display
 
 
+    <br/>
+
+
     ### Test room
 
 
-    Following your needs, the sessions are moderated by a UX Expert. 
+    Following your needs, the sessions are **moderated by a UX Expert**. 
 
 
-    The sessions are recorded (audio + video + webcam + Mouse click) even on mobile devices.
+    All sessions will be **recorded** (audio + video + webcam + Mouse click) **even on mobile devices**.
 cards:
   - title: Recorded User Testing sessions
     image: user-testing-france-mobile-screen.png
-    imageAlt: mobile-screen-user-testing-france
-    imageTitle: mobile-screen-user-testing-france
+    imageAlt: user testing france mobile screen
+    imageTitle: user testing france mobile screen
     content: We will deliver the videos of each session with the user's face and
       reactions.
   - title: Recorded Room Sessions
-    image: user-research-france-uk-florist-two.jpg
-    imageAlt: user-testing-france-ukflorist-02
-    imageTitle: user-testing-france-ukflorist-02
+    image: user-testing-france-recorded-session.jpg
+    imageAlt: user testing france recorded session
+    imageTitle: user testing france recorded session
     content: "We can also provide the room recording video. "
 otherLames:
   - title: Remote User Testing sessions
-    color: rgb(159, 204, 213)
-    image: car-dealer.jpg
-    imageAlt: Remote User Testing sessions
-    imageTitle: Remote User Testing sessions
-    body: Remote User Testing sessions
+    color: "#fCC490"
+    image: ./remote-user-testing-france-exemple.png
+    imageAlt: Remote User Testing France Exemple
+    imageTitle: Remote User Testing France Exemple
+    body: >- 
+      We can plan a **remote User Testing session online** (recruit the users, provide User Test platform or you can tell us about yours, moderate the sessions remotely).
+      <br/>
+      <br/> 
+      You will receive an URL Link for you to **assist to the test from wherever you want in the world**.
+      <br/>
+      <br/> 
+      And of course, **all the sessions** will be **recorded and delivered to you**. 
   - title: Recruitment Capabilities
-    imageAlt: Recruitment Capabilities
-    imageTitle: Recruitment Capabilities
+    image: ./recruitment-capabilities-user-testing.jpg
+    imageAlt: Recruitment Capabilities User Testing
+    imageTitle: Recruitment Capabilities User Testing
     color: rgb(253, 239, 163)
-    image: recruitment.jpg
     body: >-
-      
-      We have a partnership with a recruitment agency in France. 
+      We have a partnership with a **recruitment agency in France**. 
 
       <br/>
-
       <br/>
 
-      We can find representative users according to your objectives, plan the sessions, handle incentives.
+      We can find **representative users** according to your objectives, plan the sessions, handle incentives.
 processDescr:
   title: A 3 step process
-  studiesFor: "We Provide solutions/studies for:"
   body: >-
     1\. **We discuss about your project** : your needs, your objectives, your
     goals and discuss about the method.
@@ -91,15 +98,6 @@ processDescr:
     ​<br/>
 
     ​<br/>
-  items:
-    - label: Product Managers
-      color: rgb(235, 192, 110)
-    - label: Researchers
-      color: rgb(237, 107, 103)
-    - label: Designers
-      color: rgb(88, 111, 178)
-    - label: Marketers
-      color: rgb(137, 200, 170)
 ---
 User Testing (Usability Test, Design validation, Card Sorting...)
 

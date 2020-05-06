@@ -1,66 +1,73 @@
 ---
-metaTitle: All About users - UX Research in France
-metaDescription: All About users - UX Research in France
+metaTitle: Car Dealer - UX in France
+metaDescription: A case study on User Research and User Testing to increase upsell and convertion rate of the visitors
 order: 1
 color: "#3651ad"
-title: Car dealership UX Research Study
-subTitle: 4 days UX Research on site in France
-excerpt: Digital Showroom Experience Study - Observation/ Shadowing - Interview -
-    User Experience research - Usability Testing
-mainImage: ./car-dealer.jpg
-mainImageAlt: Car dealership UX Research Study
-mainImageTitle: Car dealership UX Research Study
+title: Car dealership User Research Study
+subTitle: 4 days User Research in shop in France
+excerpt: |-
+    Upsell and Visitor Conversion rate improvement <br />
+    Digital Showroom Experience: User Interviews, Observation, User Test
+mainImage: ./car-user-testing-france.jpg
+mainImageAlt: car User Testing France
+mainImageTitle: car User Testing France
 clientNeedsTitle: THE CLIENT'S NEED
 clientNeedsContent: '"Create a new retail experience for our customers that
   spans both the digital and physical to deliver a seamless customer journey
   online and in dealership"'
 steps:
   - title: Beginning of the study
-    image: ./car-firstStep.jpg
-    imageAlt: Beginning of the study
-    imageTitle: Beginning of the study
-    body: "We mainly discussed about:  - the next steps in the brand development -
-      the previous User Experience Studies - The reasons for launching this
-      study"
-  - title: UX Research Preparation
-    image: ./car-secondStep.jpg
-    imageAlt: UX Research Preparation
-    imageTitle: UX Research Preparation
+    image: car-dealer-user-testing-france.jpg
+    imageAlt: car dealer user testing france
+    imageTitle: car dealer user testing france
+    body: >- 
+      We mainly discussed about:<br/>
+      - the **next steps in the brand development**<br/>
+      - the **previous User Experience Studies**<br/>
+      - The main **marketing questions** that were still pending
+  - title: User Research Preparation
+    image: users-during-user-research.jpg
+    imageAlt: Users During User Research
+    imageTitle: Users During User Research
     body: >-
-      We worked with the team project on a test guide which has been translated
-      for the 3 countries: 
-       - customer's interview
-       - we started the recruitment of the targeted audience
-       - dealer's staff interview
-  - title: The Sessions
-    image: ./thirdStep.jpg
-    imageAlt: The Sessions
-    imageTitle: The Sessions
-    body: "A Senior UX Researcher observed and interviewed around 15 people in the
-      dealership, during 4 days on site in France. "
+      We worked with the team project on a **User Testing guide** which has been translated for the 3 countries: 
+       - **customer's interview**
+       - **dealer's staff interview**
+       - We started the **targeted audience recruitment**
+       
+  - title: The User Interviews in shop
+    image: car-dealer-user-interview.jpg
+    imageAlt: car dealer User Interview
+    imageTitle: car dealer User Interview
+    body: >- 
+      An **Expert in User Research** observed and interviewed :<br/>
+       - around **15 people** in the dealership <br/>
+       - during **4 days** in France.
+
   - title: The analysis, Final results
-    body: "The Expert in UX Research wrote a synthesis with problem, description,
-      recommandation pages. Difficulties have been prioritized according to
-      user's pain, recommandations have been given through quick-wins as much as
-      possible, best practices has been highlighted.  <br/> <br/> The whole
-      research has been synthesized in a ppt file and presented via Skype to the
-      international team. "
+    body: >- 
+      The **Expert in User Research** wrote a **short report** with **description and recommandation pages**.<br/><br/>
+      **Main results** have been **prioritized** according to
+      **user's pain**.<br/><br/>
+      **Recommandations** have been given through **illustrated quick-wins**. <br/><br/>
+      **Existing best practices** has been **highlighted**.  <br/> <br/> 
+      The whole research has been **synthesized in a ppt file** and explained during **an one hour and half meeting** via Skype to the **international team**.
 ---
-Market : German brand, Europe\
-Service : Brand Car Seller
+Market : **German brand**, Worldwide\
+Service : **Brand Car Dealer**
 <br/>
 <br/>
 
 ### TO SUM UP
 
-The study is about to understand, explore, discover Customer's need in a buying process of a car and especially in the Dealership service.  How to provide a new digital Showroom Experience to customers ? 
+The study is about to: <br/>
+- understand the **Visitors and Customer's needs** in a **buying process of a car** and especially in the **Dealership service**. <br/>
+- Main question:  How to provide a **new digital Showroom Experience** to customers increasing upsell and conversion rate? 
 
 <br/>
 
 ### GOAL
 
-Increasing the conversion rate  of the visitors, up-sell rate of product
-
-Providing a User Experience adapted to the customer's journey to increase the satisfaction in the brand and in the product
-
-Understand the specificity in each countries as we managed a study in France, Germany and in the UK.
+- **Increasing the conversion rate of the visitors** and the **up-sell** rate<br/>
+- Providing a **User Experience** adapted to the **visitors/customers journey** to **increase the satisfaction in the brand** and in the product/service <br/>
+- Understand **the specificity of each country** as we managed a study in France, Germany and in the UK.
