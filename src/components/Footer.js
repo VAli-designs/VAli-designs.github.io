@@ -112,14 +112,23 @@ const Footer = () => {
                 color: colors.dark,
                 textDecoration: 'none',
                 ':hover, :active': { textDecoration: 'underline' },
+                [mediaQuery.notDesktop]: {
+                  fontSize: fontSizes.large,
+                },
               },
-
               [mediaQuery.notDesktop]: {
                 marginBottom: 20,
               },
             }}
           >
-            <li css={{ marginBottom: 10 }}>
+            <li
+              css={{
+                marginBottom: 10,
+                [mediaQuery.notDesktop]: {
+                  marginBottom: 20,
+                },
+              }}
+            >
               <a href={`mailto:${email}`}>
                 <span
                   css={{
