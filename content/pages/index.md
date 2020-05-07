@@ -14,7 +14,7 @@ firstLame:
   imageAlt: Launching an User Research study in France - allaboutusers.fr
   imageTitle: Launching an User Research study in France - allaboutusers.fr
   readMoreButtonText: Read More
-  readMoreButtonLink: /resources/all-about-user-research
+  readMoreButtonLink: /resources/all-about-ux-research
   body: >-
     As User Research is based on solid and realistic user feedbacks, It can help
     you to have a **better understanding** of: 
