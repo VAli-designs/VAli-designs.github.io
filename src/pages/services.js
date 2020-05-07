@@ -39,6 +39,7 @@ const ServicePage = ({
       title={title}
       css={{
         height: `calc(90vh - ${HEADER_HEIGHT}px)`,
+        minHeight: 500,
         marginTop: HEADER_HEIGHT + 40,
         display: 'flex',
         flexDirection: 'column',
@@ -262,6 +263,7 @@ const Lame = ({ lame, inverted, ...props }) => (
     css={{
       display: 'flex',
       maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
+      minHeight: 650,
       flexDirection: inverted ? 'row-reverse' : 'row',
     }}
     {...props}

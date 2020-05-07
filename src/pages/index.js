@@ -72,6 +72,7 @@ const IndexPage = ({
         title={title}
         css={{
           height: `calc(90vh - ${HEADER_HEIGHT}px)`,
+          minHeight: 500,
           marginTop: HEADER_HEIGHT + 40,
           display: 'flex',
           flexDirection: 'column',
@@ -133,7 +134,8 @@ const IndexPage = ({
         title={firstLame.title}
         css={{
           display: 'flex',
-          maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
+          height: `calc(98vh - ${HEADER_HEIGHT}px)`,
+          minHeight: 650,
         }}
       >
         <Img
@@ -220,6 +222,7 @@ const IndexPage = ({
           flexDirection: 'column',
           justifyContent: 'center',
           height: `calc(98vh - ${HEADER_HEIGHT}px)`,
+          minHeight: 650,
           paddingBottom: 40,
           paddingLeft: 120,
           paddingRight: 120,
