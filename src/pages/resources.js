@@ -163,7 +163,7 @@ const BlogPage = ({
                   html={excerpt}
                 />
                 <Link
-                  to={`/blog/${name}`}
+                  to={`/resources/${name}`}
                   css={[
                     linkStyle(colors.orange, colors.pink),
                     {
