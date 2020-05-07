@@ -2,8 +2,8 @@
 email: contact@allaboutusers.fr
 phone: "+330756997541"
 phoneDisplay: +33 07 56 99 75 41
-linkedIn: http://www.linkedin.com/company/AllAboutUsers
-twitter: http://www.twitter.com/AllAboutUsers
+linkedIn: https://www.linkedin.com/company/allaboutusersfr
+twitter: https://twitter.com/AllAboutUsersfr
 ---
  AllAboutUsers is a User Research agency based in France.
 
