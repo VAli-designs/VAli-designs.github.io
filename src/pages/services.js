@@ -81,7 +81,10 @@ const ServicePage = ({
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </section>
-    <Lame lame={{ ...firstLame, color: colors.cyan }} />
+    <Lame
+      lame={{ ...firstLame, color: colors.cyan }}
+      css={{ minHeight: 750 }}
+    />
     <section
       css={{
         display: 'flex',
