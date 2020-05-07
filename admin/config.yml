@@ -63,7 +63,7 @@ collections:
               - {label: Image, name: image, widget: image}
               - {label: Image Alt, name: imageAlt, widget: string}
               - {label: Image Title, name: imageTitle, widget: string}
-              - {label: Content, name: content, widget: text}
+              - {label: Content, name: content, widget: markdown}
           - {label: Studies Button Text , name: studiesButtonText, widget: string}
           - {label: Content, name: body, widget: markdown}
       - label: "Studies Page"
@@ -118,15 +118,7 @@ collections:
             widget: object
             fields: 
               - {label: Title, name: title, widget: string}
-              - {label: Studies For, name: studiesFor, widget: string}
               - {label: Content, name: body, widget: markdown}
-              - label: Items
-                name: items
-                collapsed: false
-                widget: list
-                fields:
-                  - {label: Label, name: label, widget: string}
-                  - {label: Color, name: color, widget: string}
       - label: "Contact Page"
         name: "contact"
         file: "content/pages/contact.md"
@@ -191,6 +183,18 @@ collections:
           - {label: Image Alt, name: bgImageAlt, widget: string}
           - {label: Image Title, name: bgImageTitle, widget: string}
           - {label: Button Text, name: buttonText, widget: string}
+      - label: "Targeted Users"
+        name: "targeted-users"
+        file: "content/components/targeted-users.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - label: Items
+            name: items
+            collapsed: false
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: string}
+              - {label: Color, name: color, widget: string}
   - label: "Studies"
     editor:
       preview: false
