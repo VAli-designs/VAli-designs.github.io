@@ -460,7 +460,7 @@ const IndexPage = ({
           )}
         </div>
         <Link
-          to="/studies"
+          to="/ux-studies"
           css={[
             linkStyle(colors.orange, colors.pink),
             {
