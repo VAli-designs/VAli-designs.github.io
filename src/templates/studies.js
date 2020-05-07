@@ -22,6 +22,7 @@ import {
 
 const StudyPageTemplate = ({
   data: {
+    indexPage,
     markdownRemark: {
       frontmatter: {
         metaTitle,
@@ -298,7 +299,7 @@ const StudyPageTemplate = ({
         },
       ]}
     >
-      Explore Our other UX Studies
+      {indexPage.frontmatter.studiesButtonText}
     </Link>
     <GetInTouch />
     <Footer />
@@ -309,6 +310,11 @@ export default StudyPageTemplate;
 
 export const pageQuery = graphql`
   query($sourcePath: String!) {
+    indexPage: markdownRemark(fileAbsolutePath: { regex: "/pages/index.md/" }) {
+      frontmatter {
+        studiesButtonText
+      }
+    }
     markdownRemark(fileAbsolutePath: { eq: $sourcePath }) {
       frontmatter {
         metaTitle
