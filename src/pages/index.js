@@ -134,8 +134,10 @@ const IndexPage = ({
         title={firstLame.title}
         css={{
           display: 'flex',
-          height: `calc(98vh - ${HEADER_HEIGHT}px)`,
-          minHeight: 650,
+          [mediaQuery.desktop]: {
+            height: `calc(98vh - ${HEADER_HEIGHT}px)`,
+            minHeight: 650,
+          },
         }}
       >
         <Img

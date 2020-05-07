@@ -83,7 +83,7 @@ const ServicePage = ({
     </section>
     <Lame
       lame={{ ...firstLame, color: colors.cyan }}
-      css={{ minHeight: 750 }}
+      css={{ [mediaQuery.desktop]: { minHeight: 750 } }}
     />
     <section
       css={{
@@ -265,8 +265,10 @@ const Lame = ({ lame, inverted, ...props }) => (
     title={lame.title}
     css={{
       display: 'flex',
-      maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
-      minHeight: 650,
+      [mediaQuery.desktop]: {
+        minHeight: 500,
+        maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
+      },
       flexDirection: inverted ? 'row-reverse' : 'row',
     }}
     {...props}
