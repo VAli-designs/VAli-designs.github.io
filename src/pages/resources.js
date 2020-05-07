@@ -49,6 +49,10 @@ const BlogPage = ({
             paddingRight: 40,
             height: 'auto',
           },
+          [mediaQuery.smartphone]: {
+            paddingLeft: 20,
+            paddingRight: 20,
+          },
         }}
       >
         <h1
@@ -159,7 +163,20 @@ const BlogPage = ({
                   <span>{formatDate(date)}</span>
                 </p>
                 <PostHtmlRenderer
-                  css={{ flex: 1, fontSize: fontSizes.normal }}
+                  css={{
+                    flex: 1,
+                    fontSize: fontSizes.normal,
+                    [mediaQuery.smartphone]: {
+                      '> *': {
+                        display: '-webkit-box',
+                        flex: 0,
+                        WebkitBoxOrient: 'vertical',
+                        WebkitLineClamp: 3,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                      },
+                    },
+                  }}
                   html={excerpt}
                 />
                 <Link
