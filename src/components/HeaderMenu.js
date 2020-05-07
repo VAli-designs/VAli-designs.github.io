@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { css } from '@emotion/core';
 import { colors, fontSizes, zIndexes, mediaQuery, boxShadow } from '../theme';
 
@@ -8,6 +9,20 @@ export const HEADER_HEIGHT = 100;
 export const HEADER_MOBILE_HEIGHT = 60;
 
 const HeaderMenu = (props) => {
+  const { logo } = useStaticQuery(graphql`
+    query {
+      logo: file(
+        relativePath: { eq: "logo.png" }
+        sourceInstanceName: { eq: "img" }
+      ) {
+        childImageSharp {
+          fixed(width: 120, height: 120) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
   const [menuToggled, setMenuToggled] = useState(false);
   const toggleMenu = () => setMenuToggled((toggled) => !toggled);
 
@@ -43,28 +58,21 @@ const HeaderMenu = (props) => {
           color: colors.dark,
         }}
       >
-        <div
+        <Img
+          fixed={logo.childImageSharp.fixed}
           role="img"
           css={{
             background: 'black',
-            fontSize: 30,
-            width: 50,
-            height: 60,
-            lineHeight: '60px',
-            textAlign: 'center',
-            color: 'white',
+            width: '60px !important',
+            height: '60px !important',
             marginRight: 20,
             [mediaQuery.notDesktop]: {
-              height: 45,
-              width: 34,
-              fontSize: 20,
-              lineHeight: '45px',
+              height: '38px !important',
+              width: '38px !important',
               marginRight: 10,
             },
           }}
-        >
-          U
-        </div>
+        />
         <span
           css={{
             fontSize: fontSizes.large,

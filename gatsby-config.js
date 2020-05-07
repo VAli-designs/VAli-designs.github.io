@@ -82,6 +82,13 @@ module.exports = {
         path: path.join(__dirname, 'content', 'blog'),
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: path.join(__dirname, 'content', 'img'),
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-transformer-remark`,
