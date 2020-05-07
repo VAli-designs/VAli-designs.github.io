@@ -94,6 +94,10 @@ const HeaderMenu = (props) => {
               textDecoration: 'none',
               color: 'black',
               position: 'relative',
+              [mediaQuery.notDesktop]: {
+                fontSize: fontSizes.larger,
+                marginBottom: 30,
+              },
             },
             'a:after': {
               content: '" "',
@@ -127,7 +131,7 @@ const HeaderMenu = (props) => {
                 flexDirection: 'column',
                 alignItems: 'flex-end',
                 justifyContent: 'flex-start',
-                width: '200px',
+                width: '250px',
                 transform: 'translateX(100%)',
                 transition: 'all 0.5s cubic-bezier(0.77,0.2,0.05,1.0)',
               },
