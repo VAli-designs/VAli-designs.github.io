@@ -80,7 +80,8 @@ const BlogPage = ({
               excerpt,
             },
           }) => (
-            <div
+            <Link
+              to={`/resources/${name}`}
               key={name}
               css={{
                 display: 'flex',
@@ -90,6 +91,8 @@ const BlogPage = ({
                 marginBottom: 40,
                 padding: 40,
                 boxShadow,
+                textDecoration: 'none',
+                color: colors.dark,
                 [mediaQuery.notDesktop]: {
                   width: 'auto',
                   height: 'auto',
@@ -194,7 +197,7 @@ const BlogPage = ({
                   {readMoreText}
                 </Link>
               </div>
-            </div>
+            </Link>
           ),
         )}
       </div>
