@@ -840,6 +840,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.9.6":
+  version "7.9.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
+  integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.8.3", "@babel/template@^7.8.6":
   version "7.8.6"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.8.6.tgz#86b22af15f828dfb086474f964dcc3e39c43ce2b"
@@ -873,52 +880,9 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-alignment@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-18.0.0.tgz#3383e50e43e9fdd4ddb28422823d373f53d06ebf"
-  integrity sha512-tLd00MScuoaAGPRRcc7wWWC6D8QOgEivQdg6iHv6XU+J8z4lSfxEsoEzR1OWyjJn4K45tE2WJiPZJPSOE63BWg==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^18.0.0"
-    "@ckeditor/ckeditor5-ui" "^18.0.0"
-
 "@ckeditor/ckeditor5-build-balloon-block@fdecampredon/ckeditor5-build-balloon-block":
   version "18.0.0"
   resolved "https://codeload.github.com/fdecampredon/ckeditor5-build-balloon-block/tar.gz/f045f5c43497e0386afd55b9565557915655d7ad"
-
-"@ckeditor/ckeditor5-core@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-core/-/ckeditor5-core-18.0.0.tgz#ef535cbeb3c4818d463e45e784463f937bf2d63b"
-  integrity sha512-jSKh1mod2C7IkNfdW07+zi53Qv/1NzRtu35t0MyGvyjM2xIBDMOlWOYHOoIgYa7+0goaG6Sp/oyYFNsV42AobA==
-  dependencies:
-    "@ckeditor/ckeditor5-engine" "^18.0.0"
-    "@ckeditor/ckeditor5-utils" "^18.0.0"
-    lodash-es "^4.17.10"
-
-"@ckeditor/ckeditor5-engine@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-engine/-/ckeditor5-engine-18.0.0.tgz#88ab4af3fce0806b90fddad98c90d1624165b2de"
-  integrity sha512-kRxEYXGkWJjcAA3E/JcYd6lFTLG1KiaCTgL3fsNaah2tTMcBTxxXcuF6ucjokyCz092t2TdVSMzewkf5cQN2mQ==
-  dependencies:
-    "@ckeditor/ckeditor5-utils" "^18.0.0"
-    lodash-es "^4.17.10"
-
-"@ckeditor/ckeditor5-font@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-font/-/ckeditor5-font-18.0.0.tgz#c975d2f0d2c3b1fdd2eff290ed9b693934d4055d"
-  integrity sha512-vP5QctCQndzVUl3Q9v5Q5TDnFaMhwOU5ffp3yeXqmTIn5gvXf6aOw9QE6tvFJeWqXNZqpU+lHkPhg+j+YE0hUg==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^18.0.0"
-    "@ckeditor/ckeditor5-ui" "^18.0.0"
-    "@ckeditor/ckeditor5-utils" "^18.0.0"
-
-"@ckeditor/ckeditor5-horizontal-line@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-horizontal-line/-/ckeditor5-horizontal-line-18.0.0.tgz#6f9f1cec5343902c02affe85dce617cad2dabda2"
-  integrity sha512-43tlfQRlQgfBoufxgfZr+p4oAFeF79y5uXAy7TR6DGEuDgodd/yXWEGEPctBB5e5wXgLU4XRi8S+O6hCL1Nrsg==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^18.0.0"
-    "@ckeditor/ckeditor5-ui" "^18.0.0"
-    "@ckeditor/ckeditor5-widget" "^18.0.0"
 
 "@ckeditor/ckeditor5-react@^2.1.0":
   version "2.1.0"
@@ -926,33 +890,6 @@
   integrity sha512-rlHjRKhwP9tNK0Yj2UJShL14mRfxLPgJ+Pv6zTv/Mvmd4wrwGnJf+5ybOAGK92S02hP1cXH+9km+PRO1b4V+ng==
   dependencies:
     prop-types "^15.6.1"
-
-"@ckeditor/ckeditor5-ui@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-ui/-/ckeditor5-ui-18.0.0.tgz#19295293a230011ded53fe4e620405a69c0cb115"
-  integrity sha512-xosPwq3ipJNwXWgw2cdBl9L3Nzcnirv2yr1WiJ22S28GFL8+6VOA3QXshVmuyugcKzsYRd1GcSTx/jwj8Vv/IA==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^18.0.0"
-    "@ckeditor/ckeditor5-utils" "^18.0.0"
-    lodash-es "^4.17.10"
-
-"@ckeditor/ckeditor5-utils@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-utils/-/ckeditor5-utils-18.0.0.tgz#95cd6661c000e9157ebb7052a142a9daa34b5388"
-  integrity sha512-HzzXP8wdpgyNJmJSX4hoZyGBVVXtiBgLrLubApDZn4TaCFp5FNc3bFdYmHWfiyKYzW0GjuIPHq0pS9hB/pX+BA==
-  dependencies:
-    lodash-es "^4.17.10"
-
-"@ckeditor/ckeditor5-widget@^18.0.0":
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-widget/-/ckeditor5-widget-18.0.0.tgz#a89ed74eaf46b0037363fed82afc955a23f190b1"
-  integrity sha512-0TwGox0nWic9yYvDzVqrbYt3qcoKzLOH5iaMPC/l2Z/pDlIXPWbMZm1mYojVK6liXi/p18DwKiHDgm9UV8PAaQ==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^18.0.0"
-    "@ckeditor/ckeditor5-engine" "^18.0.0"
-    "@ckeditor/ckeditor5-ui" "^18.0.0"
-    "@ckeditor/ckeditor5-utils" "^18.0.0"
-    lodash-es "^4.17.10"
 
 "@emotion/babel-plugin-jsx-pragmatic@^0.1.5":
   version "0.1.5"
@@ -6209,6 +6146,14 @@ gatsby-plugin-emotion@^4.2.1:
     "@babel/runtime" "^7.8.7"
     "@emotion/babel-preset-css-prop" "^10.0.27"
 
+gatsby-plugin-google-analytics@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.1.tgz#c86a4c9c31a3ad51123cbf1508e629072a7e1c5a"
+  integrity sha512-2dfaWVxAScwMMs00g5QJ4vHHOmj9i/3MWeC273zjpC8IW35IXw/ypcDg+O7Kh+Q/Xwok1pS+c+LREic8E08iYQ==
+  dependencies:
+    "@babel/runtime" "^7.9.6"
+    minimatch "3.0.4"
+
 gatsby-plugin-manifest@^2.3.6:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.3.6.tgz#89c091a9cd7d221139c3881e8cf197242a8cb24c"
@@ -8921,11 +8866,6 @@ lockfile@^1.0.4:
   integrity sha512-cvbTwETRfsFh4nHsL1eGWapU1XFi5Ot9E85sWAwia7Y7EgB7vfqcZhTKZ+l7hCGxSPoushMv5GKhT5PdLv03WA==
   dependencies:
     signal-exit "^3.0.2"
-
-lodash-es@^4.17.10:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
 
 lodash.clonedeep@4.5.0, lodash.clonedeep@^4.5.0:
   version "4.5.0"
