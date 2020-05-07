@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PageHead from '../components/PageHead';
 import GlobalStyles from '../components/GlobalStyles';
@@ -11,7 +11,14 @@ import HeaderMenu, {
 } from '../components/HeaderMenu';
 import Footer from '../components/Footer';
 import GetInTouch from '../components/GetInTouch';
-import { fonts, fontSizes, fontWeights, colors, mediaQuery } from '../theme';
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  colors,
+  mediaQuery,
+  linkStyle,
+} from '../theme';
 
 const StudyPageTemplate = ({
   data: {
@@ -215,7 +222,7 @@ const StudyPageTemplate = ({
           index === steps.length - 1 && {
             background: colors.lightGrey,
             [mediaQuery.desktop]: {
-              marginBottom: '120px !important',
+              marginBottom: '80px !important',
             },
           },
         ]}
@@ -279,6 +286,20 @@ const StudyPageTemplate = ({
         )}
       </section>
     ))}
+    <Link
+      to="/ux-studies"
+      css={[
+        linkStyle(colors.orange, colors.pink),
+        {
+          display: 'block',
+          width: 280,
+          margin: 'auto',
+          marginBottom: 80,
+        },
+      ]}
+    >
+      Explore Our other UX Studies
+    </Link>
     <GetInTouch />
     <Footer />
   </>
