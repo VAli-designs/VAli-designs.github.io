@@ -1,23 +1,24 @@
 ---
-metaTitle: All About User Research
+metaTitle: All About UX Research
 metaDescription: >-
   What is User Research and why is it useful?
 
   At AllAboutUsers (User Research Agency in France), we receive a lot of questions, here is a kind of 
 
   Q and A about what we do and how we do it. 
-title: All About User Research
+title: All About UX Research
 date: 2020-05-07T08:08:59.511Z
 author: AllAboutUsers
-mainImage: all-about-ux.jpg
-mainImageAlt: All About User Research
-mainImageTitle: All About User Research
+mainImage: girl-user-research.jpg
+mainImageAlt: Launching an UX Research study in France - allaboutusers.fr
+mainImageTitle: Launching an UX Research study in France - allaboutusers.fr
 postTags:
   - User Research
+  - UX Research
 excerpt: >-
-  What are the real benefits of **User Research** ?\
+  What are the real benefits of **UX Research** ?\
 
-  Nowadays, **User Research** is a buzz word but in real what does it means and why is it useful?\
+  Nowadays, **UX Research** is a buzz word but in real what does it means and why is it useful?\
 
   At AllAboutUsers (User Research Agency), we receive a lot of questions, here is a kind of Q and A about what we do and how we do it.
 ---

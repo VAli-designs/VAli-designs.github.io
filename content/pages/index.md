@@ -1,18 +1,17 @@
 ---
-metaTitle: All About Users - User Testing/Research in France
-metaDescription: We conduct User Testing, User Research in France
-  (Interviews, User Test...), recruit French Users, bring you insights.
+metaTitle: All About Users - User Testing, User Research in France
+metaDescription: We conduct UX Research in France, recruit French Users, bring you insights.
   ☎ +33 07 56 99 75 41
-title: "User Testing, User Research in France "
+title: "User Testing, User Research in France"
 tags: "#Website, #Mobile, #App, #Interviews, #TestFacilities, #Phygital,
   #Shadowing, #UserExperience"
-contactButtonText: Let's talk
+contactButtonText: Contact us
 firstLame:
-  title: Launching a User Research study
+  title: Launching a UX Research study
   subTitle: What are the benefits ?
   image: girl-user-research.jpg
-  imageAlt: Launching an User Research study in France - allaboutusers.fr
-  imageTitle: Launching an User Research study in France - allaboutusers.fr
+  imageAlt: Launching an UX Research study in France - allaboutusers.fr
+  imageTitle: Launching an UX Research study in France - allaboutusers.fr
   readMoreButtonText: Read More
   readMoreButtonLink: /resources/all-about-ux-research
   body: >-
@@ -93,4 +92,4 @@ studiesButtonText: Explore UX Studies
 ---
 Are you a UX Researcher, a Designer, a Product Manager, a Marketer?    
 <br />
-We conduct **User Testing** and **User Research** in **France** (Interviews, User Test...), recruit French users, moderate the sessions and **bring insights for you to take strategic decisions** based on your **users's feedback**.
+We conduct **UX Research** in **France** (Interviews, User Test...), recruit French users, moderate the sessions and **bring insights for you to take strategic decisions** based on your **users's feedback**.
