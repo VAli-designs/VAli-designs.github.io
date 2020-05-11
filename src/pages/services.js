@@ -83,6 +83,7 @@ const ServicePage = ({
     </section>
     <Lame
       lame={{ ...firstLame, color: colors.cyan }}
+      preservereAspectRatio
       css={{ [mediaQuery.desktop]: { minHeight: 750 } }}
     />
     <section
@@ -155,6 +156,7 @@ const ServicePage = ({
         lame={lame}
         key={index}
         inverted={index % 2 === 1}
+        preservereAspectRatio
         css={{
           marginBottom: 120,
           [mediaQuery.notDesktop]: {
@@ -260,32 +262,51 @@ export const pageQuery = graphql`
   }
 `;
 
-const Lame = ({ lame, inverted, ...props }) => (
+const Lame = ({ lame, inverted, preservereAspectRatio, ...props }) => (
   <section
     title={lame.title}
     css={{
+      background: lame.color,
       display: 'flex',
       [mediaQuery.desktop]: {
         minHeight: 500,
-        maxHeight: `calc(98vh - ${HEADER_HEIGHT}px)`,
+        height: `calc(98vh - ${HEADER_HEIGHT}px)`,
       },
       flexDirection: inverted ? 'row-reverse' : 'row',
     }}
     {...props}
   >
-    <Img
-      css={{
-        width: '58%',
-        flexShrink: 0,
-        [mediaQuery.notDesktop]: { display: 'none' },
-      }}
-      imgStyle={{ objectPosition: 'top center' }}
-      fluid={lame.image.childImageSharp.fluid}
-      alt={lame.title}
-    />
     <div
       css={{
-        background: lame.color,
+        position: 'relative',
+        width: '58%',
+        flexShrink: 0,
+        overflow: 'hidden',
+        [mediaQuery.notDesktop]: { display: 'none' },
+      }}
+    >
+      <Img
+        css={[
+          {
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            left: 0,
+            top: 0,
+          },
+          preservereAspectRatio && {
+            height: 'auto',
+            top: '50%',
+            transform: 'translateY(-50%)',
+          },
+        ]}
+        imgStyle={{ objectPosition: 'top center' }}
+        fluid={lame.image.childImageSharp.fluid}
+        alt={lame.title}
+      />
+    </div>
+    <div
+      css={{
         width: '42%',
         flexShrink: 0,
         padding: '50px 100px',
