@@ -1,13 +1,13 @@
 ---
 metaTitle: All About Users - User Testing, User Research in France
-metaDescription: We conduct UX Research in France, recruit French Users, bring you insights.
-  ☎ +33 07 56 99 75 41
-title: "User Testing, User Research in France"
+metaDescription: We conduct UX Research in France, recruit French Users, bring
+  you insights. ☎ +33 07 56 99 75 41
+title: User Testing, User Research in France
 tags: "#Website, #Mobile, #App, #Interviews, #TestFacilities, #Phygital,
   #Shadowing, #UserExperience"
 contactButtonText: Contact us
 firstLame:
-  title: Launching a UX Research study
+  title: "All About UX Research "
   subTitle: What are the benefits ?
   image: girl-user-research.jpg
   imageAlt: Launching an UX Research study in France - allaboutusers.fr
@@ -29,8 +29,7 @@ firstLame:
     <br/>
 
     We have a <strong>full article</strong> based on our experience and our customer's feedbacks.
-servicesTitle: User Research can help you grow
-  your market in France
+servicesTitle: User Research can help you grow your market in France
 services:
   - title: Qualitative User Research
     image: ./qualitative-user-research.jpg
@@ -74,7 +73,7 @@ studies:
       User Test : E-shop, Product and Packaging performance
   - title: German Car Dealership User Research Study
     path: /ux-studies/car-dealership-ux-research-study
-    image: "./car-user-testing-france.jpg"
+    image: ./car-user-testing-france.jpg
     imageAlt: Car user testing in France
     imageTitle: German Car Dealership User Research Study in France
     content: |-
